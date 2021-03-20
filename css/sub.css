@@ -73,7 +73,7 @@ header .gnbOpen svg>*{
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/sub1-recommended-1.JPG) no-repeat center/cover;
 }
 .cards a:nth-child(2){
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/sub1-recommended-2.JPG) no-repeat center/cover;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/sub1-recommended-2.jpg) no-repeat center/cover;
 }
 .cards a::after{
     content:'';
