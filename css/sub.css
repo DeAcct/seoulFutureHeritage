@@ -1,0 +1,158 @@
+@charset "utf-8";
+@namespace svgns url(http://www.w3.org/2000/svg);
+
+
+/*sub1*/
+.find header{
+    background-color:#fff;
+    border-bottom: 2px solid #444A54;
+    height: 182px;
+}
+.find header h1 svg>*{
+    fill:#444A54;
+}
+header .gnbOpen svg>*{
+    stroke: #444A54;
+}
+.currentPage{
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #444A54;
+    border-top: 2px solid #444A54;
+}
+.currentPageInner{
+    width: 85.417%;
+    margin: 0 auto; 
+}
+.currentPage h2{
+    line-height: 64px;
+    font-size: 30px;
+}
+.find main{
+    margin-top: 272px;
+} 
+
+#recommended h2{
+    text-align: center;
+    font-size: 5rem;
+}
+.recommendedInner{
+    width: 85.417%;
+    margin: 0 auto; 
+}
+.recommendedInner .tags{
+    display: flex;
+    justify-content: space-between;
+    width: 775px;
+    margin: 60px auto 0;
+}
+.recommendedInner .tags li{
+    background-color:#F67853;
+    border-radius: 27px;
+}
+.recommendedInner .tags li a{
+    display: block;
+    padding: 10px 30px;
+    font-size: 3rem;
+    font-weight: 700;
+    color:#fff;
+}
+.recommendedInner .cards{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cards a{
+    position: relative;
+    display: block;
+    width: 48.780%;
+    padding: 51px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/sub1-recommended-1.JPG) no-repeat center/cover;
+}
+.cards a:nth-child(2){
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/sub1-recommended-2.JPG) no-repeat center/cover;
+}
+.cards a::after{
+    content:'';
+    z-index: -1;
+    position: absolute;
+    height: 95.215%;
+    width: 90%;
+    background-color:rgba(57, 70, 133,0.7);
+    bottom:-10px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(15px);
+    opacity: 0;
+    transition: 150ms ease-out;
+}
+.cards a:hover::after{
+    opacity: 1;
+}
+.cards a strong{
+    display: inline-block;
+    margin-left: 63px;
+    padding: 13px 30px;
+    border-radius: 27px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background-color:#fff;
+}
+.cards a .cardInfo{
+    padding: 142px 63px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#fff;
+}
+.cards a h3{
+    font-family: 'GmarketSansBold';
+    font-size: 4.5rem;
+    line-height: 1.3;
+}
+.cards a p{
+    font-size: 3rem;
+}
+
+#map{
+    margin-top: 170px;
+}
+.mapInner{
+    width: 85.417%;
+    height: 660px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 82px auto 0;
+}
+.mapLeft strong{
+    font-size: 3rem;
+}
+.mapLeft h3{
+    font-family: 'GmarketSansBold';
+    font-size: 15rem;
+    margin-top: 42px;
+}
+.mapRight{
+    width: 48.780%;
+    height: 660px;
+}
+.mapRight svg{
+    width: 100%;
+    height: 100%;
+}
+.mapRight .cls-1{
+    fill: #3e4b8d;
+}
+.mapRight .cls-4{
+    fill: #7083e2;
+}
+.mapRight .cls-2{
+    fill: #b7c2ea;
+}
+.mapRight .cls-3 {
+    fill: #e8ebf1;
+}

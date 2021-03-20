@@ -7,16 +7,25 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'NEXON Lv2 Gothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
-    font-weight: normal;
+    font-family: 'NanumBarunGothic';
+    src: url('font/NanumBarunGothic.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
-    font-family: 'NEXON Lv2 Gothic Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
-    font-weight: normal;
+    font-family: 'NanumBarunGothic';
+    src: url('font/NanumBarunGothicBold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: url('font/NanumBarunGothicLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 
@@ -36,7 +45,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
     box-sizing: border-box;
@@ -57,8 +65,9 @@ button{
 }
 html,body{
     font-size: 0.625em;
-	font-family: 'NEXON Lv2 Gothic', '맑은 고딕', Arial, Helvetica, sans-serif;
-	color:#444A54;
+	font-family: 'NanumBarunGothic', '맑은 고딕', Arial, Helvetica, sans-serif;
+	font-weight: 500;
+    color:#444A54;
 }
 
 .lnBrk{
@@ -77,4 +86,8 @@ a{
 }
 h2{
     font-family: 'GmarketSansBold';
+}
+main h2{
+    text-align: center;
+    font-size: 5rem;
 }
