@@ -1,14 +1,15 @@
 @charset "utf-8";
-@namespace svgns url(http://www.w3.org/2000/svg);
 
 
-/*sub1*/
-.find header{
+/*find*/
+header{
     background-color:#fff;
     border-bottom: 2px solid #444A54;
+}
+.find header{
     height: 182px;
 }
-.find header h1 svg>*{
+header h1 svg>*{
     fill:#444A54;
 }
 header .gnbOpen svg>*{
@@ -65,15 +66,13 @@ header .gnbOpen svg>*{
 }
 .cards a{
     position: relative;
-    display: block;
     width: 48.780%;
     padding: 51px 0;
     border-radius: 20px;
-    cursor: pointer;
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/sub1-recommended-1.JPG) no-repeat center/cover;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
 }
-.cards a:nth-child(2){
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/sub1-recommended-2.jpg) no-repeat center/cover;
+.cards a:nth-child(2){ 
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
 }
 .cards a::after{
     content:'';
@@ -155,4 +154,118 @@ header .gnbOpen svg>*{
 }
 .mapRight .cls-3 {
     fill: #e8ebf1;
+}
+
+/*yongsan*/
+#visual{
+    display: flex;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),url(../img/yongsan-visual.jpg) no-repeat center/cover;
+    align-items: center;
+    overflow: hidden;
+}
+#visual h2{
+    width: 210vw;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+}
+.mqChunk{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    animation: marquee 30s linear infinite;    
+    margin-right: 10vw;
+}
+.myChunk:last-child{
+    margin-right: 0;
+}
+.mqChunk span{
+    font-size: 10rem;
+}
+
+.yongsan main{
+    margin-top: 108px;
+}
+.locationWrap{
+    width: 85.417%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 31.707% 31.707% 31.707%;
+    grid-template-rows: 355px 355px 355px 355px 355px 355px;
+    /*그리드 여백*/
+    row-gap: 60px; /*세로*/
+    column-gap: 2.439%; /*가로*/
+}
+.locationWrap article{
+    background: url(../img/yongsan-location-namsan1.jpg) no-repeat center/cover;
+    border-radius: 20px;
+    padding: 50px 65px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: 150ms ease-in-out;
+}
+.locationWrap article:nth-child(2n){
+    grid-row: auto / span 2;
+}
+.locationWrap article:nth-child(6){
+    grid-column: 3;
+    grid-row: 2 / span 2;
+}
+.locationWrap article:last-child{
+    grid-column: 3;
+    grid-row: 5 / span 2;
+}
+.locationWrap .locationInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    opacity: 0;
+    transition: 150ms ease-in-out;
+    transform:translate(0,100px);
+}
+.locationWrap article:hover .locationInfo{
+    transform:translate(0,0);
+    opacity: 1;
+}
+.locationWrap .locationInfo h3{
+    font-size: 3.5rem;
+    color:#fff;
+    text-overflow: ellipsis;
+}
+.locationWrap .locationInfo ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color:#fff;
+    border-radius: 25px;
+    padding: 0 22px;
+}
+.locationInfo ul li{
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+.locationInfo li button{
+    width: 100%;
+    height: 100%;
+    background: url(../img/yongsan-location-bookmark.svg) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.locationInfo li:nth-child(2) button{
+    background-image: url(../img/yongsan-location-like.svg);
+}
+.locationInfo li:last-child button{
+    background-image: url(../img/yongsan-location-share.svg);
+}
+
+
+@keyframes marquee{
+    100%{
+        transform:translate(-105vw,0);
+    }
 }

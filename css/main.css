@@ -21,14 +21,14 @@ header h1 a{
     height: 45px;
     font-size: 0;
 }
-header h1 a svg{
+header h1 svg{
     width: 100%;
     height: 100%;
 }
-header h1 a svg>*{
+header h1 svg>*{
     fill:#fff;
 }
-header.on h1 a svg>*{
+header.on h1 svg>*{
     fill:#444A54;
 }
 .headerInner{
@@ -326,10 +326,15 @@ footer{
     position:absolute;
     right:0;
 }
+.footerTop li{
+    margin-right: 40px;
+}
+.footerTop li:last-child{
+    margin:0;
+}
 .footerTop li a{
     color:#fff;
     font-size: 2.5rem;
-    padding: 10px 22px;
 }
 .footerBottom{
     margin-top: 256px;
