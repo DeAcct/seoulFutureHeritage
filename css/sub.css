@@ -105,15 +105,16 @@ header .gnbOpen svg>*{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:#fff;
 }
 .cards a h3{
     font-family: 'GmarketSansBold';
     font-size: 4.5rem;
     line-height: 1.3;
+    color:#fff;
 }
 .cards a p{
     font-size: 3rem;
+    color:#fff;
 }
 
 #map{
@@ -164,8 +165,7 @@ header .gnbOpen svg>*{
     overflow: hidden;
 }
 #visual h2{
-    width: 210vw;
-    color:#fff;
+    width: 202vw;
     display: flex;
     justify-content: space-between;
 }
@@ -174,13 +174,14 @@ header .gnbOpen svg>*{
     display: flex;
     justify-content: space-between;
     animation: marquee 30s linear infinite;    
-    margin-right: 10vw;
+    margin-right: 2vw;
 }
 .myChunk:last-child{
     margin-right: 0;
 }
 .mqChunk span{
     font-size: 10rem;
+    color:#fff;
 }
 
 .yongsan main{
@@ -196,25 +197,60 @@ header .gnbOpen svg>*{
     row-gap: 60px; /*세로*/
     column-gap: 2.439%; /*가로*/
 }
-.locationWrap article{
-    background: url(../img/yongsan-location-namsan1.jpg) no-repeat center/cover;
+.locationWrap a{
+    background: url(../img/yongsan-location-namsan.jpg) no-repeat center/cover;
     border-radius: 20px;
-    padding: 50px 65px;
-    display: flex;
-    align-items: flex-end;
     overflow: hidden;
     transition: 150ms ease-in-out;
 }
-.locationWrap article:nth-child(2n){
+.locationWrap a:nth-child(2n){
     grid-row: auto / span 2;
 }
-.locationWrap article:nth-child(6){
+.locationWrap a:nth-child(2){
+    background-image: url(../img/find-recommended-1.jpg);
+}
+.locationWrap a:nth-child(3){
+    background-image: url(../img/yongsan-location-banpo.jpg);
+}
+.locationWrap a:nth-child(4){
+    background-image: url(../img/find-recommended-2.jpg);
+}
+.locationWrap a:nth-child(5){
+    background-image: url(../img/yongsan-location-sunringang.jpg);
+}
+.locationWrap a:nth-child(6){
     grid-column: 3;
     grid-row: 2 / span 2;
+    background-image: url(../img/yongsan-location-sunrintree.jpg); 
 }
-.locationWrap article:last-child{
+.locationWrap a:nth-child(7){
+    background-image: url(../img/yongsan-location-sunguisa.jpg);
+}
+.locationWrap a:nth-child(8){
+    background-image: url(../img/yongsan-location-cheilchurch.jpg);
+}
+.locationWrap a:nth-child(9){
+    background-image: url(../img/yongsan-location-wondaegu.jpg);
+}
+.locationWrap a:nth-child(10){
+    background-image: url(../img/yongsan-location-wonsam.jpg);
+}
+.locationWrap a:nth-child(11){
+    background-image: url(../img/yongsan-location-antique.jpg);
+}
+.locationWrap a:last-child{
     grid-column: 3;
     grid-row: 5 / span 2;
+    background-image: url(../img/yongsan-location-jamsu.jpg);
+}
+.locationWrap .coloring{
+    width: 100%;
+    height:100%;
+    padding: 50px 65px;
+    display: flex;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    transition: 150ms ease-out;
 }
 .locationWrap .locationInfo{
     display: flex;
@@ -223,16 +259,19 @@ header .gnbOpen svg>*{
     width: 100%;
     opacity: 0;
     transition: 150ms ease-in-out;
-    transform:translate(0,100px);
+    transform:translate(0,-100px);
 }
-.locationWrap article:hover .locationInfo{
+.locationWrap a:hover .locationInfo{
     transform:translate(0,0);
     opacity: 1;
 }
+.locationWrap a:hover .coloring{
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
 .locationWrap .locationInfo h3{
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     color:#fff;
-    text-overflow: ellipsis;
 }
 .locationWrap .locationInfo ul{
     display: flex;
@@ -263,9 +302,46 @@ header .gnbOpen svg>*{
     background-image: url(../img/yongsan-location-share.svg);
 }
 
+.pageIndi{
+    width: 85.417%;
+    margin: 128px auto 0;
+    height: 48px;
+}
+.pageIndiWrap{
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.pageNum{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 144px;
+    height: 48px;
+    border-radius: 25px;
+    background-color:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.16);
+}
+.pageNum li a{
+    font-size:3rem;
+}
+.pageNum li a.current{
+    font-weight: 700;
+    color:#F67853;
+}
+.nextBtn{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background:url(../img/yongsan-location-pageIndi-next.svg) no-repeat,#F67853;
+    background-size: 75%;
+    background-position: 60%;
+}
+
 
 @keyframes marquee{
     100%{
-        transform:translate(-105vw,0);
+        transform:translate(-101vw,0);
     }
 }
