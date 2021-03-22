@@ -207,7 +207,7 @@ header .gnbOpen svg>*{
     grid-row: auto / span 2;
 }
 .locationWrap a:nth-child(2){
-    background-image: url(../img/find-recommended-1.jpg);
+    background-image: url(../img/find-recommended-1.JPG);
 }
 .locationWrap a:nth-child(3){
     background-image: url(../img/yongsan-location-banpo.jpg);
