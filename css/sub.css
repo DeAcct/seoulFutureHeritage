@@ -338,10 +338,42 @@ header .gnbOpen svg>*{
     background-size: 75%;
     background-position: 60%;
 }
-
-
 @keyframes marquee{
     100%{
         transform:translate(-101vw,0);
     }
 }
+
+/*detail*/
+.detail main{
+    margin-top: 122px;
+}
+
+#summery{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.summeryWrap{
+    width: 56.25%;
+}
+.summeryWrap .sumPic{
+    width: 72%;
+    height: 708px;
+    background-color:#ddd;
+    margin-left: 28%;
+}
+.summeryWrap .heading{
+    margin-left: -38.889%;
+    padding-top: 235px;
+}
+#summery .summeryWrap .heading h2{
+    text-align: left;
+    font-size: 10rem;
+}
+.summeryWrap .heading strong{
+    padding-top: 34px;
+    font-size: 3rem;
+}
+
+
