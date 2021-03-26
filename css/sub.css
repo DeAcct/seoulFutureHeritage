@@ -334,7 +334,7 @@ header .gnbOpen svg>*{
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background:url(../img/yongsan-location-pageIndi-next.svg) no-repeat,#F67853;
+    background:url(../img/nextBtn.svg) no-repeat,#F67853;
     background-size: 75%;
     background-position: 60%;
 }
@@ -402,7 +402,7 @@ header .gnbOpen svg>*{
     background: url(../img/detail-transport-bus.svg) no-repeat,#E8EBF1;
     background-size: 60%;
     background-position: center;
-    border-radius: 20px;
+    border-radius: 0.5rem;
 }
 .transList li:last-child .icon{
     background-image: url(../img/detail-transport-subway.svg);
@@ -420,10 +420,73 @@ header .gnbOpen svg>*{
     justify-content: space-between;
 }
 .infoMediaWrap .infoMLeft{
-    width: 44%;
+    width: 48.529%;
     height: 530px;
     background-color:#ddd;
+    /*카카오맵 홀더*/
+}
+.infoMediaWrap .infoMRight{
+    width: 48.529%;
+    height: 900px;
+    position: relative;
+    margin-top: 166px;
+    margin-bottom: 50px;
 }
 
+.infoMRight .imageSlideWrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.imageSlideWrap .imgSlide{
+    position:absolute;
+    left:0;/*버튼 누르면 js 조작*/
+    top:0;
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.imageSlideWrap .imgSlide li{
+    width: 33.333%;
+    height: 100%;
+    background: url(../img/detail-imgSlide1.jpg) no-repeat center/cover;
+}
+.imageSlideWrap .imgSlide li:nth-child(2){
+    background-image: url(../img/detail-imgSlide2.jpg);
+}
+.imageSlideWrap .imgSlide li:last-child{
+    background-image: url(../img/detail-imgSlide3.jpg);
+}
+.infoMRight .control{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    position:absolute;
+    right: 0;
+    bottom: -50px;
+}
+.infoMRight .control button{
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.infoMRight .prevImg{
+    background: url(../img/prevBtn.svg), #444A54;
+}
+.infoMRight .nextImg{
+    background: url(../img/nextBtn.svg), #F67853;
+}
+
+
+.tourCourse .currentPage{
+    border-top:none
+}
+
+.tourCourse main{
+    margin-top: 272px;
+}
 
 
