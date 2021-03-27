@@ -214,15 +214,15 @@ header.on .gnbOpen svg>*{
     width: 78.788%;
     max-width: 520px;
     height: 660px;
-    background: linear-gradient(225deg,rgba(255,255,255,0.95),rgba(255,255,255,0)), url(../img/kingsejong.jpg) center/cover;
+    background: linear-gradient(225deg,rgba(255,255,255,0.95),rgba(255,255,255,0)), url(../img/what-kingsejong.jpg) center/cover;
     border-radius: 20px;
 }
 .whatPics li:nth-child(2n) div{
     margin-left: 21.212%;/*140/660*100*/
-    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0)), url(../img/chonggye.jpg) center/cover;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0)), url(../img/what-chonggye.jpg) center/cover;
 }
 .whatPics li:last-child div{
-    background: linear-gradient(225deg, rgba(255,255,255,0.95), rgba(255,255,255,0)), url(../img/hannok.jpg) center/cover;
+    background: linear-gradient(225deg, rgba(255,255,255,0.95), rgba(255,255,255,0)), url(../img/what-hannok.jpg) center/cover;
 }
 .whatPics li strong{
     position:absolute;
