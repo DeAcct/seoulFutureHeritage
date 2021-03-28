@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/main.js" defer></script>
     <title>서울미래유산</title>
 </head>
 <body>
@@ -18,8 +23,7 @@
         <header>
             <div class="headerInner">
                 <h1>
-                    <a href="index.html">
-                        서울미래유산
+                    <a href="index.html">서울미래유산
                         <svg>
                             <path d="M22.28,19.7a8.77,8.77,0,0,1-.75-2.65,22.77,22.77,0,0,1-.19-2.94V1.78H10.94V14.11a22.81,22.81,0,0,1-.2,2.94A8.77,8.77,0,0,1,10,19.7q-1.83,4.07-4.28,8.44A78.64,78.64,0,0,1,0,36.88l7.18,5.55Q9.7,39.25,12,35.82c1.52-2.3,2.9-4.5,4.16-6.61Q18,32.38,20.2,35.74c1.48,2.25,3.08,4.42,4.8,6.54l6.73-5.84a87,87,0,0,1-5.37-8.54Q24.11,23.76,22.28,19.7Z" transform="translate(0 0)"/>
                             <polygon points="33.96 12.72 25.84 12.72 25.84 21.88 33.96 21.88 33.96 45 43.66 45 43.66 1.29 33.96 1.29 33.96 12.72"/>
@@ -28,12 +32,11 @@
                         </svg>
                     </a>
                 </h1>
-                <button class="gnbOpen">
-                    대메뉴열기
+                <button class="gnbOpen">대메뉴열기
                     <svg>
-                        <path class="cls-1" d="M0,36.3c5.62,0,5.62,6.7,11.25,6.7s5.62-6.7,11.25-6.7S28.12,43,33.75,43,39.37,36.3,45,36.3"/>
-                        <path class="cls-1" d="M0,19.15c5.62,0,5.62,6.7,11.25,6.7s5.62-6.7,11.25-6.7,5.62,6.7,11.25,6.7,5.62-6.7,11.25-6.7"/>
-                        <path class="cls-1" d="M0,2C5.62,2,5.62,8.7,11.25,8.7S16.87,2,22.5,2s5.62,6.7,11.25,6.7S39.37,2,45,2"/>
+                        <path class="openSt" d="M0,2C5.62,2,5.62,8.7,11.25,8.7S16.87,2,22.5,2s5.62,6.7,11.25,6.7S39.37,2,45,2"/>
+                        <path class="openNd" d="M0,19.15c5.62,0,5.62,6.7,11.25,6.7s5.62-6.7,11.25-6.7,5.62,6.7,11.25,6.7,5.62-6.7,11.25-6.7"/>
+                        <path class="openRd" d="M0,36.3c5.62,0,5.62,6.7,11.25,6.7s5.62-6.7,11.25-6.7S28.12,43,33.75,43,39.37,36.3,45,36.3"/>
                     </svg>
                 </button>
                 <nav class="menu">
@@ -84,7 +87,7 @@
                         <div class="whatVisual">
                             <svg>
                                 <path class="line" d="M99,40.68c0,217.93,82,217.93,82,435.85S99,694.46,99,912.38s82,217.93,82,435.85-82,217.92-82,435.84c0,70.6,41,123.63,41,178.64" transform="translate(-63.62 0)"/>
-                                <path class="arrow" d="M103.57,86.25,133.22,7.19A5.32,5.32,0,0,0,125.55.73L101.28,15a5.34,5.34,0,0,1-5.38,0L71.63.73A5.32,5.32,0,0,0,64,7.19L93.61,86.25a5.32,5.32,0,0,0,10,0Z" transform="translate(-63.62 0)"/>
+                                <path class="arrow" d="M140.12,39.87,61.05,10.22A5.32,5.32,0,0,0,54.6,17.9L68.83,42.16a5.29,5.29,0,0,1,0,5.38L54.6,71.81a5.31,5.31,0,0,0,6.45,7.67l79.07-29.65a5.32,5.32,0,0,0,0-10Z" transform="translate(-53.87 10)"/>
                             </svg>
                         </div>
                         <p>

@@ -63,6 +63,10 @@ header.on h1 svg>*{
     stroke: #fff;
     stroke-width: 3px;
     fill:none;
+    transition: 150ms ease-out;
+}
+.gnbOpen.open svg>*{
+    stroke: #444A54;
 }
 header.on .gnbOpen svg>*{
     stroke: #444A54;
@@ -242,7 +246,7 @@ header.on .gnbOpen svg>*{
     top:0;
     left:50%;
     width: 152px;
-    height: 1940px;
+    height: 2000px;
     transform: translate(-50%,0);
 }
 .whatVisual svg{
