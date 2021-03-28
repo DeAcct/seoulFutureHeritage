@@ -187,7 +187,7 @@ header .gnbOpen svg>*{
 .yongsan main{
     margin-top: 108px;
 }
-.locationWrap{
+.yongsan .locationWrap{
     width: 85.417%;
     margin: 0 auto;
     display: grid;
@@ -197,48 +197,48 @@ header .gnbOpen svg>*{
     row-gap: 60px; /*세로*/
     column-gap: 2.439%; /*가로*/
 }
-.locationWrap a{
+.yongsan .locationWrap a{
     background: url(../img/yongsan-location-namsan.jpg) no-repeat center/cover;
     border-radius: 20px;
     overflow: hidden;
     transition: 150ms ease-in-out;
 }
-.locationWrap a:nth-child(2n){
+.yongsan .locationWrap a:nth-child(2n){
     grid-row: auto / span 2;
 }
-.locationWrap a:nth-child(2){
+.yongsan .locationWrap a:nth-child(2){
     background-image: url(../img/find-recommended-1.JPG);
 }
-.locationWrap a:nth-child(3){
+.yongsan .locationWrap a:nth-child(3){
     background-image: url(../img/yongsan-location-banpo.jpg);
 }
-.locationWrap a:nth-child(4){
+.yongsan .locationWrap a:nth-child(4){
     background-image: url(../img/find-recommended-2.jpg);
 }
-.locationWrap a:nth-child(5){
+.yongsan .locationWrap a:nth-child(5){
     background-image: url(../img/yongsan-location-sunringang.jpg);
 }
-.locationWrap a:nth-child(6){
+.yongsan .locationWrap a:nth-child(6){
     grid-column: 3;
     grid-row: 2 / span 2;
     background-image: url(../img/yongsan-location-sunrintree.jpg); 
 }
-.locationWrap a:nth-child(7){
+.yongsan .locationWrap a:nth-child(7){
     background-image: url(../img/yongsan-location-sunguisa.jpg);
 }
-.locationWrap a:nth-child(8){
+.yongsan .locationWrap a:nth-child(8){
     background-image: url(../img/yongsan-location-cheilchurch.jpg);
 }
-.locationWrap a:nth-child(9){
+.yongsan .locationWrap a:nth-child(9){
     background-image: url(../img/yongsan-location-wondaegu.jpg);
 }
-.locationWrap a:nth-child(10){
+.yongsan .locationWrap a:nth-child(10){
     background-image: url(../img/yongsan-location-wonsam.jpg);
 }
-.locationWrap a:nth-child(11){
+.yongsan .locationWrap a:nth-child(11){
     background-image: url(../img/yongsan-location-antique.jpg);
 }
-.locationWrap a:last-child{
+.yongsan .locationWrap a:last-child{
     grid-column: 3;
     grid-row: 5 / span 2;
     background-image: url(../img/yongsan-location-jamsu.jpg);
@@ -458,7 +458,7 @@ header .gnbOpen svg>*{
 .imageSlideWrap .imgSlide li:last-child{
     background-image: url(../img/detail-imgSlide3.jpg);
 }
-.infoMRight .control{
+.control{
     display: flex;
     width: 200px;
     height: 100px;
@@ -466,17 +466,17 @@ header .gnbOpen svg>*{
     right: 0;
     bottom: -50px;
 }
-.infoMRight .control button{
+.control button{
     width: 50%;
     height: 100%;
     background-position: center;
     background-size: 50%;
     background-repeat: no-repeat;
 }
-.infoMRight .prevImg{
+.prevImg{
     background: url(../img/prevBtn.svg), #444A54;
 }
-.infoMRight .nextImg{
+.nextImg{
     background: url(../img/nextBtn.svg), #F67853;
 }
 
@@ -580,6 +580,7 @@ header .gnbOpen svg>*{
     z-index: -1;
     display: flex;
     transition: 150ms ease-out;
+    align-items: center;
 }
 #visual .picMask .picture{
     width: 100vw;
@@ -591,11 +592,194 @@ header .gnbOpen svg>*{
 .tcDetail main{
     margin-top: 208px;
 }
-
 .tcDetail .mainInner{
     width: 85.417%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.tcDetail .mainInner .tcMainLeft{
+    width: 57.317%;
+}
+.tcDetail .mainInner section{
+    width: 100%;
+    padding: 90px 70px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.16);
     position:relative;
 }
+.tcDetail .mainInner section:not(:last-of-type){
+    margin-bottom: 250px;
+}
+.locaCard h2{
+    line-height: 1.15;
+    text-align: left;
+}
+.locaCard h2 span{
+    font-size: 7rem;
+}
+.locaCard .location{
+    display: block;
+    margin-top: 30px;
+    font-size: 3rem;
+}
+.locaCard p{
+    margin-top: 54px;
+    line-height: 1.3;
+    font-size: 2.6rem;
+}
+.locaCard .gallery{
+    display: flex;
+    width: 100%;
+    height: 240px;
+    margin-top: 64px;
+    justify-content: space-between;
+}
+.locaCard .gallery div{
+    max-width: 240px;
+    width: 30%;
+    height: 100%;
+    background: url(../img/find-recommended-2.jpg) no-repeat center/cover;
+}
+/*서울역광장*/
+.locaCard .gallery div:nth-child(2){
+    background-image: url(../img/tcDetail-seoulSta2.jpg);
+}
+.locaCard .gallery div:last-child{
+    background-image: url(../img/tcDetail-seoulSta3.jpg);
+}
+/*서울광장*/
+.tcDetail section:nth-of-type(2) .gallery div:first-child{
+    background-image: url(../img/tcDetail-seoulSquare1.jpg)
+}
+.tcDetail section:nth-of-type(2) .gallery div:nth-child(2){
+    background-image: url(../img/tcDetail-seoulSquare2.jpg)
+}
+.tcDetail section:nth-of-type(2) .gallery div:last-child{
+    background-image: url(../img/tcDetail-seoulSquare3.jpg)
+}
+/*세실극장*/
+.tcDetail section:nth-of-type(3) .gallery div:first-child{
+    background-image: url(../img/tcDetail-sesil1.jpg)
+}
+.tcDetail section:nth-of-type(3) .gallery div:nth-child(2){
+    background-image: url(../img/tcDetail-sesil2.jpg)
+}
+.tcDetail section:nth-of-type(3) .gallery div:last-child{
+    background-image: url(../img/tcDetail-sesil3.jpg)
+}
+/*옛 부민관*/
+.tcDetail section:nth-of-type(4) .gallery div:first-child{
+    background-image: url(../img/tcDetail-bumin1.jpg)
+}
+.tcDetail section:nth-of-type(4) .gallery div:nth-child(2){
+    background-image: url(../img/tcDetail-bumin2.jpg)
+}
+.tcDetail section:nth-of-type(4) .gallery div:last-child{
+    background-image: url(../img/tcDetail-bumin3.jpg)
+}
+/*도로원표*/
+.tcDetail section:nth-of-type(5) .gallery div:first-child{
+    background-image: url(../img/tcDetail-distance1.jpg)
+}
+.tcDetail section:nth-of-type(5) .gallery div:nth-child(2){
+    background-image: url(../img/tcDetail-distance2.jpg)
+}
+.tcDetail section:nth-of-type(5) .gallery div:last-child{
+    background-image: url(../img/tcDetail-distance3.jpg)
+}
+/*이순신동상*/
+.tcDetail section:nth-of-type(6) .gallery div:first-child{
+    background-image: url(../img/tcDetail-LeeSunShin1.jpg)
+}
+.tcDetail section:nth-of-type(6) .gallery div:nth-child(2){
+    background-image: url(../img/tcDetail-LeeSunShin2.jpg)
+}
+.tcDetail section:nth-of-type(6) .gallery div:last-child{
+    background-image: url(../img/tcDetail-LeeSunShin3.jpg)
+}
+/*세종문화회관*/
+.tcDetail section:last-of-type .gallery div:first-child{
+    background-image: url(../img/tcDetail-SejongCulture1.jpg)
+}
+.tcDetail section:last-of-type .gallery div:nth-child(2){
+    background-image: url(../img/tcDetail-SejongCulture2.jpg)
+}
+.tcDetail section:last-of-type .gallery div:last-child{
+    background-image: url(../img/tcDetail-SejongCulture3.jpg)
+}
+.locaCard .more{
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+    height: 100px;
+    width: 380px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.16);
+    background-color:#F67853;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    font-size: 3rem;
+}
+#tcDetailMap{
+    width: 34.375vw;
+    height: 700px;
+    background-color:#ddd;
+    position:relative;
+}
+#tcDetailMap.on{
+    position:fixed;
+    top: 208px;
+    right: 7.292%;
+}
+#tcDetailMap .control{
+    position:absolute;
+}
+#tcDetailMap .prevImg{
+    background-image:url(../img/upBtn.svg);
+}
+#tcDetailMap .nextImg{
+    background-image:url(../img/downBtn.svg);
+}
+
+/*wallpaper*/
 
 
+.wallpaper .currentPage{
+    border-top:none;
+    background-color: #fff;
+}
+.wallpaper main{
+    margin-top: 272px;
+}
+.wallpaper .locationWrap{
+    width: 85.417%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 31.707% 31.707% 31.707%;
+    grid-template-rows: 355px 355px;
+    /*그리드 여백*/
+    row-gap: 60px; /*세로*/
+    column-gap: 2.439%; /*가로*/
+}
+
+.wallpaper .locationWrap a{
+    background: url(../img/yongsan-location-namsan.jpg) no-repeat center/cover;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 150ms ease-in-out;
+}
+.wallpaper .locationInfo{
+    flex-direction: column;
+    align-items: unset;
+}
+.wallpaper .locationInfo h3{
+    margin: 0 auto;
+}
+.wallpaper .downloadIcon{
+    width: 48px;
+    height: 48px;
+    background: url(../img/download.svg) no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
