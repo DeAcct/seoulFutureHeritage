@@ -489,7 +489,8 @@ header .gnbOpen svg>*{
 .tourCourse main{
     margin-top: 272px;
 }
-.tourCourse section:not(:last-of-type){
+.tourCourse a:not(:last-of-type){
+    display: block;
     margin-bottom: 200px;
 }
 .courseInner{
@@ -499,23 +500,29 @@ header .gnbOpen svg>*{
     align-items: center;
     justify-content: space-between;
 }
-.tourCourse section:nth-of-type(2n) .courseInner{
+.tourCourse a:nth-of-type(2n) .courseInner{
     flex-direction: row-reverse;
 }
 
-.coursePic{
+.coursePicWrap{
     width: 57.317%;
     height: 530px;
-    background: url(../img/find-recommended-2.jpg) no-repeat center/cover;
     border-radius: 20px;
+    overflow: hidden;
 }
-.tourCourse section:nth-of-type(2) .coursePic{
+.coursePic{
+    width: 150%;
+    height: 150%;
+    margin-top: -100px;
+    background: url(../img/find-recommended-2.jpg) no-repeat center/cover;
+}
+.tourCourse a:nth-of-type(2) .coursePic{
     background-image:url(../img/tourCourse-2.jpg);
 }
-.tourCourse section:nth-of-type(3) .coursePic{
+.tourCourse a:nth-of-type(3) .coursePic{
     background-image:url(../img/tourCourse-3.jpg);
 }
-.tourCourse section:nth-of-type(4) .coursePic{
+.tourCourse a:nth-of-type(4) .coursePic{
     background-image:url(../img/tourCourse-4.jpg);
 }
 .courseRight{

@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-
 const $gnbOpen = document.getElementsByClassName('gnbOpen')[0];
 const $menu = document.getElementsByClassName('menu')[0];
 const hasClass = function(target, keyword){
@@ -10,9 +8,32 @@ const hasClass = function(target, keyword){
     return isResult;
 }
 
+const menuTl = anime.timeline({
+    duration: 450,
+    direction: 'alternate'
+});
+menuTl.add({
+    targets: '.openSt',
+    easing: 'easeInOutCubic',
+    strokeDashoffset: [0, anime.setDashoffset],
+    duration: 150
+});
+menuTl.add({
+    targets: '.openNd',
+    easing: 'easeInOutCubic',
+    strokeDashoffset: [0, anime.setDashoffset],
+    duration: 150
+});
+menuTl.add({
+    targets: '.openRd',
+    easing: 'easeInOutCubic',
+    strokeDashoffset: [0, anime.setDashoffset],
+    duration: 150
+});
+menuTl.pause()
+
 $gnbOpen.addEventListener('click', function(){
     if (hasClass($menu.classList, 'open') && hasClass(this.classList, 'open')){
-        /*console.log("open을 가지고 있어요");*/
         $menu.classList.remove('open');
         this.classList.remove('open')
     }
@@ -20,45 +41,24 @@ $gnbOpen.addEventListener('click', function(){
         $menu.classList.add('open');
         this.classList.add('open')
     }
-})
-const tl = anime.timeline({
-    duration: 450,
-    direction: 'alternate'
-});
-tl.add({
-    targets: '.openSt',
-    easing: 'easeInOutCubic',
-    strokeDashoffset: [0, anime.setDashoffset],
-    duration: 150
-});
-tl.add({
-    targets: '.openNd',
-    easing: 'easeInOutCubic',
-    strokeDashoffset: [0, anime.setDashoffset],
-    duration: 150
-});
-tl.add({
-    targets: '.openRd',
-    easing: 'easeInOutCubic',
-    strokeDashoffset: [0, anime.setDashoffset],
-    duration: 150
-});
-tl.pause()
-$gnbOpen.addEventListener('mouseenter',function(){
-    tl.play()
+    menuTl.play()
 })
 
-const tween = gsap.to(".whatVisual .arrow", {
-    motionPath:{
-        path: ".whatVisual .line",
-        align: ".whatVisual .line",
-        autoRotate: true,
-        alignOrigin: [0.5, 0.5],
-    },
-    scrollTrigger:{
-        trigger: ".whatVisual",
-        start: "top center",
-        scrub:-3
-    }
-})
+if (hasClass(document.body.classList, 'index')){
+    gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+    const tween = gsap.to(".whatVisual .arrow", {
+        motionPath:{
+            path: ".whatVisual .line",
+            align: ".whatVisual .line",
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5],
+        },
+        scrollTrigger:{
+            trigger: ".whatVisual",
+            start: "top center",
+            scrub:-3
+        }
+    })
+}
+
 

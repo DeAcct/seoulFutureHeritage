@@ -7,6 +7,11 @@
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/sub.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/sub.js" defer></script>
     <title>서울미래유산</title>
 </head>
 <body class="tourCourse">
@@ -32,9 +37,9 @@
                 <button class="gnbOpen">
                     대메뉴열기
                     <svg>
-                        <path class="cls-1" d="M0,36.3c5.62,0,5.62,6.7,11.25,6.7s5.62-6.7,11.25-6.7S28.12,43,33.75,43,39.37,36.3,45,36.3"/>
-                        <path class="cls-1" d="M0,19.15c5.62,0,5.62,6.7,11.25,6.7s5.62-6.7,11.25-6.7,5.62,6.7,11.25,6.7,5.62-6.7,11.25-6.7"/>
-                        <path class="cls-1" d="M0,2C5.62,2,5.62,8.7,11.25,8.7S16.87,2,22.5,2s5.62,6.7,11.25,6.7S39.37,2,45,2"/>
+                        <path class="openSt" d="M0,2C5.62,2,5.62,8.7,11.25,8.7S16.87,2,22.5,2s5.62,6.7,11.25,6.7S39.37,2,45,2"/>
+                        <path class="openNd" d="M0,19.15c5.62,0,5.62,6.7,11.25,6.7s5.62-6.7,11.25-6.7,5.62,6.7,11.25,6.7,5.62-6.7,11.25-6.7"/>
+                        <path class="openRd" d="M0,36.3c5.62,0,5.62,6.7,11.25,6.7s5.62-6.7,11.25-6.7S28.12,43,33.75,43,39.37,36.3,45,36.3"/>
                     </svg>
                 </button>
                 <nav class="menu">
@@ -55,9 +60,11 @@
         
         <main>
             <div class="mainInner">
-                <section>
+                <a href="tcDetail.html" id="st">
                     <div class="courseInner">
-                        <div class="coursePic"></div>
+                        <div class="coursePicWrap">
+                            <div class="coursePic"></div>
+                        </div>
                         <div class="courseRight">
                             <h2>
                                 <span class="lnBrk">서울의</span>
@@ -75,10 +82,12 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <section>
+                </a>
+                <a href="#" id="nd">
                     <div class="courseInner">
-                        <div class="coursePic"></div>
+                        <div class="coursePicWrap">
+                            <div class="coursePic"></div>
+                        </div>
                         <div class="courseRight">
                             <h2>
                                 <span class="lnBrk">한옥과</span>
@@ -96,10 +105,12 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <section>
+                </a>
+                <a href="#" id="rd">
                     <div class="courseInner">
-                        <div class="coursePic"></div>
+                        <div class="coursePicWrap">
+                            <div class="coursePic"></div>
+                        </div>
                         <div class="courseRight">
                             <h2>
                                 <span class="lnBrk">성북동의</span>
@@ -117,10 +128,12 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <section>
+                </a>
+                <a href="#" id="th">
                     <div class="courseInner">
-                        <div class="coursePic"></div>
+                        <div class="coursePicWrap">
+                            <div class="coursePic"></div>
+                        </div>
                         <div class="courseRight">
                             <h2>
                                 <span class="lnBrk">예술의</span>
@@ -138,7 +151,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </a>
                 <div class="pageIndi">
                     <div class="pageIndiWrap">
                         <ul class="pageNum">
