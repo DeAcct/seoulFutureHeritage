@@ -140,6 +140,7 @@ header .gnbOpen svg>*{
     width: 48.780%;
     height: 660px;
     position:relative;
+    overflow: hidden;
 }
 .mapRight *{
     cursor:none;
