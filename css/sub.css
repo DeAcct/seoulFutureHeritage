@@ -139,6 +139,10 @@ header .gnbOpen svg>*{
 .mapRight{
     width: 48.780%;
     height: 660px;
+    position:relative;
+}
+.mapRight *{
+    cursor:none;
 }
 .mapRight svg{
     width: 100%;
@@ -155,6 +159,24 @@ header .gnbOpen svg>*{
 }
 .mapRight .cls-3 {
     fill: #e8ebf1;
+}
+.mapRight .cursor{
+    position:absolute;
+    top: 0;
+    left:0;
+    mix-blend-mode:difference;
+}
+.mapRight .cursor>*{
+    fill: #fff;
+}
+.mapRight .arrow{
+    fill:none;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+.mapRight:not(:hover) .cursor{
+    display: none;
 }
 
 /*yongsan*/

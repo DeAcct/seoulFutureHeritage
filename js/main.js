@@ -1,5 +1,5 @@
-const $gnbOpen = document.getElementsByClassName('gnbOpen')[0];
-const $menu = document.getElementsByClassName('menu')[0];
+const $gnbOpen = document.querySelector('.gnbOpen');
+const $menu = document.querySelector('.menu');
 const hasClass = function(target, keyword){
     let isResult = false;
     for (const domClass of target) {
@@ -46,7 +46,7 @@ $gnbOpen.addEventListener('click', function(){
 
 if (hasClass(document.body.classList, 'index')){
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-    const tween = gsap.to(".whatVisual .arrow", {
+    gsap.to(".whatVisual .arrow", {
         motionPath:{
             path: ".whatVisual .line",
             align: ".whatVisual .line",

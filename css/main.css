@@ -8,7 +8,6 @@ header{
     height: 122px;
     border-bottom: 2px solid #fff;
     background-color:#394685;
-    transition: 150ms ease-out;
     z-index: 100;
 }
 header.on{
@@ -119,7 +118,8 @@ header.on .gnbOpen svg>*{
     background-color:#F67853;
     transition: 150ms ease-out;
 }
-.gnb li a:hover span{
+.gnb li a:hover span,
+.gnb li a:focus span{
     width: 360px;
     border-radius: 10px;
 }

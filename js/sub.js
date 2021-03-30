@@ -48,10 +48,19 @@ if (hasClass(document.body.classList, 'tourCourse')){
     });
 }
 else if (hasClass(document.body.classList, 'find')){
-    const $map = document.querySelectorAll('.mapRight svg>*')
-    $map.forEach(target => {
+    const $mapRight = document.querySelector('.mapRight')
+    const $mapA = document.querySelectorAll('.mapRight svg>a')
+    const $locaHeading = document.querySelector('.mapLeft h3')
+    const $cursor = document.querySelector('.mapRight .cursor')
+    $mapA.forEach(target => {
         target.addEventListener('mouseenter', function(){
-            console.log('dataType 넣어주세요!')
+            /*console.log(`${this.dataset.loca}`)*/
+            $locaHeading.innerText=this.dataset.loca
         })
     });
+    $mapRight.addEventListener('mousemove', function(e){
+        /*console.log(`${e.layerX}, ${e.layerY}`)*/
+        $cursor.style.transform = `translate(${e.layerX}px, ${e.layerY}px)`;
+    })
+
 }
