@@ -9,6 +9,7 @@ header{
     border-bottom: 2px solid #fff;
     background-color:#394685;
     z-index: 100;
+    transition: 150ms ease-out;
 }
 header.on{
     background-color:#fff;

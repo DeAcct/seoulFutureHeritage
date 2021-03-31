@@ -127,6 +127,7 @@ header .gnbOpen svg>*{
     justify-content: space-between;
     align-items: center;
     margin: 82px auto 0;
+    position:relative;
 }
 .mapLeft strong{
     font-size: 3rem;
@@ -141,9 +142,6 @@ header .gnbOpen svg>*{
     height: 660px;
     position:relative;
     overflow: hidden;
-}
-.mapRight *{
-    cursor:none;
 }
 .mapRight svg{
     width: 100%;
@@ -161,23 +159,35 @@ header .gnbOpen svg>*{
 .mapRight .cls-3 {
     fill: #e8ebf1;
 }
-.mapRight .cursor{
+.mapRight a:hover{
+    transition: 500ms ease-out;
+}
+.mapRight a:hover .cls-1{
+    fill: #F67853;
+}
+.mapRight a:hover .cls-4{
+    fill: #ee9074;
+}
+.mapRight a:hover .cls-2{
+    fill: #e6b3a3;
+}
+.mapRight a:hover .cls-3{
+    fill: #eeddd7;
+}
+.mapInner .mapVisual{
     position:absolute;
-    top: 0;
-    left:0;
-    mix-blend-mode:difference;
+    width: 100%;
+    z-index:-1;
 }
-.mapRight .cursor>*{
-    fill: #fff;
-}
-.mapRight .arrow{
+.mapInner .mapVisual svg{
+    width: 100%;
+    height: 100%;
     fill:none;
-    stroke: #fff;
-    stroke-width: 4px;
-    stroke-linecap: round;
 }
-.mapRight:not(:hover) .cursor{
-    display: none;
+.mapVisual svg>*{
+    stroke: rgba(246, 120, 83, 0.1);
+    stroke-linecap:butt;
+    stroke-width: 10px;
 }
 
 /*yongsan*/

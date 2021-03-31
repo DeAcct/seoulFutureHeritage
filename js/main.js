@@ -45,6 +45,21 @@ $gnbOpen.addEventListener('click', function(){
 })
 
 if (hasClass(document.body.classList, 'index')){
+    let scrollPos;
+    const header = document.body.querySelector('header')
+
+    const headerStyle = function(){
+        requestAnimationFrame(headerStyle)
+        scrollPos  = window.scrollY;
+        if (scrollPos !== 0){
+            header.classList.add('on')
+        }
+        else{
+            header.classList.remove('on')
+        }
+    }
+    headerStyle();
+
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
     gsap.to(".whatVisual .arrow", {
         motionPath:{

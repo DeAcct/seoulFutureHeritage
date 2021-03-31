@@ -48,27 +48,21 @@ if (hasClass(document.body.classList, 'tourCourse')){
     });
 }
 else if (hasClass(document.body.classList, 'find')){
-    const $mapRight = document.querySelector('.mapRight')
     const $mapA = document.querySelectorAll('.mapRight svg>a')
     const $locaHeading = document.querySelector('.mapLeft h3')
-    const $cursor = document.querySelector('.mapRight .cursor')
-    const spinAni = anime({
-        targets: ".spin",
-        duration:500,
-        loop:true,
-        rotate:180
+
+    anime({
+        targets:'.mapInner .mapVisual svg',
+        easing: 'easeInOutCubic',
+        strokeDashoffset: [0, anime.setDashoffset],
+        duration: 600,
+        loop:true
     })
-    spinAni.pause()
+
     $mapA.forEach(target => {
         target.addEventListener('mouseenter', function(){
             /*console.log(`${this.dataset.loca}`)*/
             $locaHeading.innerText=this.dataset.loca
         })
     });
-    $mapRight.addEventListener('mousemove', function(e){
-        /*console.log(`${e.layerX}, ${e.layerY}`)*/
-        spinAni.play();
-        $cursor.style.transform = `translate(${e.layerX}px, ${e.layerY}px)`;
-    })
-
 }
