@@ -66,3 +66,35 @@ else if (hasClass(document.body.classList, 'find')){
         })
     });
 }
+else if (hasClass(document.body.classList, 'detail')){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".sumPic", {
+        backgroundPosition:100,
+        scrollTrigger:{
+            trigger: ".summeryWrap",
+            start: "top center",
+            scrub:2
+        }
+    })
+    const mapContainer = document.body.querySelector('.infoMLeft')// 지도를 표시할 div  
+    // 주소-좌표 변환 객체를 생성합니다
+    const geocoder = new kakao.maps.services.Geocoder();
+    // 주소로 좌표를 검색합니다
+    geocoder.addressSearch('서울 용산구 남산공원길 105', function(result, status) {
+        // 정상적으로 검색이 완료됐으면 
+        if (status === kakao.maps.services.Status.OK) {
+            let mapOption = {
+                center: new kakao.maps.LatLng(result[0].y, result[0].x), // 지도의 중심좌표
+                level: 5 // 지도의 확대 레벨
+            }
+            let markerPosition = new kakao.maps.LatLng(result[0].y, result[0].x); 
+            // 마커를 생성합니다
+            let marker = new kakao.maps.Marker({
+                position: markerPosition
+            });
+            let map = new kakao.maps.Map(mapContainer, mapOption); 
+            marker.setMap(map);
+            
+        } 
+    });  
+}
