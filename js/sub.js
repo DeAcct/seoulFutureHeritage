@@ -33,19 +33,19 @@ if (hasClass(document.body.classList, 'tourCourse')){
             scrub:2
         }
     })
-    const linedraw = anime({
+    let tl = anime.timeline({
+        duration: 700,
+        loop:true
+    });
+    tl.add({
         targets: '.waveVisual svg path',
         easing: 'easeInOutCubic',
         strokeDashoffset: [0, anime.setDashoffset],
-        duration: 500,
-        direction: 'alternate'
+        duration: 350,
+        direction: 'alternate',
+    }).add({
+        /*180도 돌려서 Dashoffset조작.*/
     })
-    linedraw.pause();
-    $section.forEach(target => {
-        target.addEventListener('mouseenter', function(){
-            linedraw.play()
-        })
-    });
 }
 else if (hasClass(document.body.classList, 'find')){
     const $mapA = document.querySelectorAll('.mapRight svg>a')
@@ -67,6 +67,10 @@ else if (hasClass(document.body.classList, 'find')){
     });
 }
 else if (hasClass(document.body.classList, 'detail')){
+    const $imgSlide = document.body.querySelector('.imgSlide')
+    const $prevBtn = document.body.querySelector('.prevImg')
+    const $nextBtn = document.body.querySelector('.nextImg')
+
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(".sumPic", {
         backgroundPosition:100,
@@ -94,7 +98,41 @@ else if (hasClass(document.body.classList, 'detail')){
             });
             let map = new kakao.maps.Map(mapContainer, mapOption); 
             marker.setMap(map);
-            
         } 
-    });  
+    });
+    
+    let imgSlideSet = 0;
+    let imgPos;
+    const imgWidth = $imgSlide.clientWidth/3;
+    console.log(imgWidth)
+    const next = function(){
+        /*console.log("뒤로")*/
+        /*this - "뒤로버튼"엘리먼트를 나타냄*/
+        imgSlideSet--;
+        if (imgSlideSet<-2){
+            imgSlideSet = 0;
+        }
+        imgPos = imgWidth*imgSlideSet
+        gsap.to($imgSlide, {
+            x:imgPos,
+            duration:0.5,
+            ease:"back.out(1.7)"
+        })
+    }
+    const prev = function(){
+        /*console.log("뒤로")*/
+        /*this - "뒤로버튼"엘리먼트를 나타냄*/
+        imgSlideSet++;
+        if (imgSlideSet>0){
+            imgSlideSet = -2;
+        }
+        imgPos = imgWidth*imgSlideSet
+        gsap.to($imgSlide, {
+            x:imgPos,
+            duration:0.5,
+            ease:"back.out(1.7)"
+        })
+    }
+    $prevBtn.addEventListener("click", prev)
+    $nextBtn.addEventListener("click", next)
 }

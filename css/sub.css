@@ -473,7 +473,7 @@ header .gnbOpen svg>*{
 }
 .imageSlideWrap .imgSlide{
     position:absolute;
-    left:0;/*버튼 누르면 js 조작*/
+    left:0;
     top:0;
     width: 300%;
     height: 100%;
