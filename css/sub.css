@@ -469,12 +469,8 @@ header .gnbOpen svg>*{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    position: relative;
 }
 .imageSlideWrap .imgSlide{
-    position:absolute;
-    left:0;
-    top:0;
     width: 300%;
     height: 100%;
     display: flex;
@@ -574,6 +570,7 @@ header .gnbOpen svg>*{
     width: 100%;
     height: 25px;
     margin: 15px 0 30px;
+    transform: rotateY(180deg);
 }
 .waveVisual svg{
     width: 100%;
@@ -618,7 +615,6 @@ header .gnbOpen svg>*{
     top:277px;
     z-index: -1;
     display: flex;
-    transition: 150ms ease-out;
     align-items: center;
 }
 #visual .picMask .picture{
@@ -630,6 +626,7 @@ header .gnbOpen svg>*{
 
 .tcDetail main{
     margin-top: 208px;
+    padding-bottom: 50px;
 }
 .tcDetail .mainInner{
     width: 85.417%;
@@ -763,16 +760,26 @@ header .gnbOpen svg>*{
 #tcDetailMap{
     width: 34.375vw;
     height: 700px;
-    background-color:#ddd;
     position:relative;
+    transition:50ms ease-out;
 }
-#tcDetailMap.on{
+#tcDetailMap .map{
+    width: 100%;
+    height: 100%;
+}
+#tcDetailMap.topReach{
     position:fixed;
     top: 208px;
     right: 7.292%;
 }
+#tcDetailMap.bottomReach{
+    position:fixed;
+    top: 208px;
+    right: -50vw;
+}
 #tcDetailMap .control{
     position:absolute;
+    z-index: 10;
 }
 #tcDetailMap .prevImg{
     background-image:url(../img/upBtn.svg);
