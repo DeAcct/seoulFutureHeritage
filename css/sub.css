@@ -300,6 +300,7 @@ header .gnbOpen svg>*{
 }
 .locationWrap a:hover .coloring{
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     opacity: 1;
 }
 .locationWrap .locationInfo h3{
