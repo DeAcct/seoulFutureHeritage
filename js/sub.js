@@ -67,7 +67,6 @@ else if (hasClass(document.body.classList, 'find')){
 
     $mapA.forEach(target => {
         target.addEventListener('mouseenter', function(){
-            /*console.log(`${this.dataset.loca}`)*/
             $locaHeading.innerText=this.dataset.loca
         })
     })
@@ -92,7 +91,7 @@ else if (hasClass(document.body.classList, 'detail')){
         if (status === kakao.maps.services.Status.OK) {
             let mapOption = {
                 center: new kakao.maps.LatLng(result[0].y, result[0].x),
-                level: 5 // 지도의 확대 레벨
+                level: 5
             }
             let markerPosition = new kakao.maps.LatLng(result[0].y, result[0].x)
             let marker = new kakao.maps.Marker({
@@ -228,7 +227,7 @@ else if (hasClass(document.body.classList, 'tcDetail')){
     let oldScroll=window.scrollY, scrollDirection;
     window.addEventListener('scroll', function(){
         scrollAmount = Math.round(window.scrollY)
-        scrollDirection = (scrollAmount >= oldScroll) ? 1 : -1; /*1은 아래로스크롤, -1은 위로스크롤*/
+        scrollDirection = (scrollAmount >= oldScroll) ? 1 : -1;
         if(scrollAmount+208>=mainTop && scrollAmount+window.innerHeight<=mainbottom){
             $tcMap.classList.remove('bottomReach')
             if (!hasClass($tcMap.classList,'topReach')){
@@ -241,21 +240,6 @@ else if (hasClass(document.body.classList, 'tcDetail')){
                 $tcMap.classList.add('bottomReach')
             }
         }
-
-        /*
-        if (scrollAmount-cardTop[mapCont]<10){
-            mapMove(locations[mapCont])
-        }
-        else if(scrollAmount-cardTop[mapCont]>10 && scrollAmount<cardTop[mapCont+1]){
-            mapCont++
-        }*/
-        
-        /*
-        위로 올라가는거 구현 필요
-        else if (scrollAmount-cards[mapCont].innerHeight<cardTop[mapCont]){
-            mapCont--
-            mapMove(locations[mapCont])
-        }*/
 
         if (scrollAmount>$main.offsetTop){
             if (scrollDirection===1){
@@ -310,17 +294,4 @@ else if (hasClass(document.body.classList, 'tcDetail')){
             behavior:'smooth'
         })
     })
-    
-
-
-    /*
-        smooth scrolling
-        window.scrollTo({
-            top:6356,
-            left:0,
-            behavior:'smooth'
-        })
-    */
-
-
 }
