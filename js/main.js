@@ -1,3 +1,6 @@
+const observer = lozad();
+observer.observe();
+
 const $gnbOpen = document.querySelector('.gnbOpen');
 const $menu = document.querySelector('.menu');
 const hasClass = function(target, keyword){

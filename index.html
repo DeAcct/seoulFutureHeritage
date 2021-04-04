@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js"></script>
@@ -14,11 +15,6 @@
     <title>서울미래유산</title>
 </head>
 <body class="index">
-
-    <!--
-        vsHide == text-indend:-9999px;
-        lnBrk == display:block;
-    -->
     <div class="wrapper">
         <header>
             <div class="headerInner">
@@ -72,15 +68,15 @@
                     <div class="whatInner">
                         <ul class="whatPics">
                             <li>
-                                <div class="peoplePic"></div>
+                                <div class="peoplePic lozad" data-background-image-set="linear-gradient(225deg,rgba(255,255,255,0.95),rgba(255,255,255,0)), url(../img/what-kingsejong.jpg) center/cover"></div>
                                 <strong><span class="lnBrk">중요한</span><span class="lnBrk">인물이나</span><span class="lnBrk">사건</span> </strong>
                             </li>
                             <li>
-                                <div class="landmarkPic"></div>
+                                <div class="landmarkPic lozad" data-background-image-set="linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0)), url(../img/what-chonggye.jpg) center/cover"></div>
                                 <strong><span class="lnBrk">서울 소재</span><span class="lnBrk">기념물</span></strong>
                             </li>
                             <li>
-                                <div class="traditionPic"></div>
+                                <div class="traditionPic lozad" data-background-image-set="linear-gradient(225deg, rgba(255,255,255,0.95), rgba(255,255,255,0)), url(../img/what-hannok.jpg) center/cover"></div>
                                 <strong><span class="lnBrk">서울</span><span class="lnBrk">생활문화</span></strong>
                             </li>
                         </ul>

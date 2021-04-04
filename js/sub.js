@@ -181,41 +181,54 @@ else if (hasClass(document.body.classList, 'tcDetail')){
     const mapContainer = document.body.querySelector('#tcDetailMap .map')
     const geocoder = new kakao.maps.services.Geocoder()
     let mapOption, markerPosition, marker, map
+    const mapMarker = function(){
+        locations.forEach((target)=>{
+            geocoder.addressSearch(target.innerText, (result, status) =>{
+                if (status === kakao.maps.services.Status.OK) {
+                    markerPosition = new kakao.maps.LatLng(result[0].y, result[0].x)
+                    marker = new kakao.maps.Marker({
+                        position: markerPosition
+                    });
+                    marker.setMap(map);
+                }
+            })
+        })
+    }
     const mapMake = function(){
-        
         geocoder.addressSearch('용산구 한강대로 405', (result, status) =>{
             if (status === kakao.maps.services.Status.OK) {
                 mapOption = {
                     center: new kakao.maps.LatLng(result[0].y, result[0].x),
-                    level: 3 // 지도의 확대 레벨
+                    level: 2 // 지도의 확대 레벨
                 }
-                markerPosition = new kakao.maps.LatLng(result[0].y, result[0].x)
-                marker = new kakao.maps.Marker({
-                    position: markerPosition
-                })
             } 
             map = new kakao.maps.Map(mapContainer, mapOption)
-            marker.setMap(map)
         })
+        mapMarker()
     }
-    mapMake()
     const mapMove = function(location){
         geocoder.addressSearch(location.innerText, (result, status) =>{
             if (status === kakao.maps.services.Status.OK) {
                 moveLatLon = new kakao.maps.LatLng(result[0].y, result[0].x)
                 map.setCenter(moveLatLon);
-                markerPosition = new kakao.maps.LatLng(result[0].y, result[0].x)
-                marker = new kakao.maps.Marker({
-                    position: markerPosition
-                })
             }
         })
-        marker.setMap(map)
     }
+    window.addEventListener('load', function(){
+        window.scrollTo({
+            top:0,
+            left:0,
+            behavior:'smooth'
+        })
+        mapMake()
+        mapMove('용산구 한강대로 405')
+    })
     
     let mapCont=0;
+    let oldScroll=window.scrollY, scrollDirection;
     window.addEventListener('scroll', function(){
         scrollAmount = Math.round(window.scrollY)
+        scrollDirection = (scrollAmount >= oldScroll) ? 1 : -1; /*1은 아래로스크롤, -1은 위로스크롤*/
         if(scrollAmount+208>=mainTop && scrollAmount+window.innerHeight<=mainbottom){
             $tcMap.classList.remove('bottomReach')
             if (!hasClass($tcMap.classList,'topReach')){
@@ -228,18 +241,41 @@ else if (hasClass(document.body.classList, 'tcDetail')){
                 $tcMap.classList.add('bottomReach')
             }
         }
+
+        /*
         if (scrollAmount-cardTop[mapCont]<10){
             mapMove(locations[mapCont])
         }
         else if(scrollAmount-cardTop[mapCont]>10 && scrollAmount<cardTop[mapCont+1]){
             mapCont++
-        }
+        }*/
+        
         /*
         위로 올라가는거 구현 필요
         else if (scrollAmount-cards[mapCont].innerHeight<cardTop[mapCont]){
             mapCont--
             mapMove(locations[mapCont])
         }*/
+
+        if (scrollAmount>$main.offsetTop){
+            if (scrollDirection===1){
+                if (scrollAmount-cardTop[mapCont]<0){
+                    mapMove(locations[mapCont])
+                }
+                else {
+                    mapCont++
+                }
+            }
+            else{
+                if (scrollAmount+window.innerHeight-cardTop[mapCont]>0){
+                    mapMove(locations[mapCont-1])
+                }
+                else{
+                    mapCont--
+                }
+            }
+        }
+        oldScroll = this.pageYOffset
     })
 
     let moveTo = cardTop[0]
