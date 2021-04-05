@@ -1,5 +1,5 @@
 if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('serviceWorker.js').then(function(reg){
+    navigator.serviceWorker.register('serviceWorker.js').then(function(){
         const cacheName = 'sfhPwa-v1';
         const appShellFiles = [
             './',
@@ -89,12 +89,14 @@ if('serviceWorker' in navigator){
             './img/yongsan-location-wonsam.jpg',
             './img/yongsan-visual.jpg'
         ]
-        const contentToCache = appShellFiles.concat(appMedias)
+        const filesToCache = appShellFiles.concat(appMedias)
+
         self.addEventListener('install', (e)=>{
-            e.waitUntil((async () => {
-                const cache = await caches.open(cacheName);
-                await cache.addAll(contentToCache)
-            })())
+            e.waitUntil(
+                caches.open(cacheName).then((cache)=>{
+                    cache.addAll(filesToCache)
+                })
+            )
         })
         self.addEventListener('fetch', (e)=>{
             e.respondWith((async () => {
@@ -106,16 +108,6 @@ if('serviceWorker' in navigator){
                 const cache = await caches.open(cacheName);
                 cache.put(e.request, response.clone())
                 return response;
-            })())
-        })
-        self.addEventListener('activate', (e)=>{
-            e.waitUntil(caches.keys().then((keyList)=>{
-                Promise.all(keyList.map((key)=>{
-                    if (key == cacheName){
-                        return;
-                    }
-                    cacjes.delete(key)
-                }))
             })())
         })
     })
