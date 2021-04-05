@@ -510,8 +510,11 @@ header .gnbOpen svg>*{
 }
 
 
+.tourCourse header{
+    height: 182px;
+}
 .tourCourse .currentPage{
-    border-top:none;
+    border-top: 2px solid #444A54;
     background-color: #fff;
 }
 
@@ -792,8 +795,11 @@ header .gnbOpen svg>*{
 /*wallpaper*/
 
 
-.wallpaper .currentPage{
-    border-top:none;
+.wallpaper header{
+    height: 182px;
+}
+.tourCourse .currentPage{
+    border-top: 2px solid #444A54;
     background-color: #fff;
 }
 .wallpaper main{
