@@ -1,5 +1,5 @@
 if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('./serviceWorker.js').then(function(reg){
+    navigator.serviceWorker.register('js/serviceWorker.js').then(function(reg){
         reg.addEventListener('updatefound', function(){
             newWorker = reg.installing;
             newWorker.addEventListener('statechange', function(){
