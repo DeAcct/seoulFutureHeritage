@@ -205,16 +205,16 @@ header .gnbOpen svg>*{
 .mqChunk{
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     animation: marquee 30s linear infinite;    
     margin-right: 2vw;
 }
 .myChunk:last-child{
     margin-right: 0;
 }
-.mqChunk span{
-    font-size: 10rem;
-    color:#fff;
+#visual .mqChunk span{
+    font-size: 6.5rem;
+    color:rgba(255,255,255,0.8);
 }
 
 .yongsan main{
@@ -489,11 +489,12 @@ header .gnbOpen svg>*{
 }
 .control{
     display: flex;
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
     position:absolute;
     right: 0;
-    bottom: -50px;
+    bottom: 0;
+    transform: translateY(50%);
 }
 .control button{
     width: 50%;
@@ -595,7 +596,7 @@ header .gnbOpen svg>*{
 .tcDetail #visual{
     background:transparent;
     flex-direction: column;
-    height: 900px;
+    height: 90px;
     position:relative;
 }
 .tcDetail #visual strong{
@@ -616,7 +617,7 @@ header .gnbOpen svg>*{
     height: 740px;
     overflow: hidden;
     position:absolute;
-    top:277px;
+    top:400px;
     z-index: -1;
     display: flex;
     align-items: center;
@@ -750,14 +751,14 @@ header .gnbOpen svg>*{
 .locaCard .more{
     position:absolute;
     left: 50%;
-    transform: translateX(-50%);
-    bottom: -50px;
-    height: 100px;
-    width: 380px;
+    transform: translate(-50%, 50%);
+    bottom: 0;
+    height: 75px;
+    width: 300px;
     box-shadow: 0 10px 20px rgba(0,0,0,.16);
     background-color:#F67853;
     text-align: center;
-    line-height: 100px;
+    line-height: 75px;
     color: #fff;
     font-size: 3rem;
 }

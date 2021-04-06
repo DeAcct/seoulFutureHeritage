@@ -104,14 +104,14 @@ header.on .gnbOpen svg>*{
 .gnb li a{
     position:relative;
     color:#444A54;
-    font-size: 7rem;
+    font-size: 4rem;
     font-family: 'GmarketSansBold';
 }
 .gnb li a.current:before{
     position:absolute;
     content:'';
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: #F67853;
     bottom: -40%;
     left:50%;
@@ -126,14 +126,14 @@ header.on .gnbOpen svg>*{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 0;
-    height: 20px;
-    background-color:#F67853;
+    height: 10px;
+    background-color:rgb(246, 123, 85, 0.3);
     transition: 150ms ease-out;
 }
 .gnb li a:hover span,
 .gnb li a:focus span{
-    width: 360px;
-    border-radius: 10px;
+    width: 150%;
+    border-radius: 5px;
 }
 
 #visual{
@@ -151,12 +151,11 @@ header.on .gnbOpen svg>*{
     padding-top: 203px;
     line-height: 1.3;
     margin: 0 auto;
-    overflow: hidden;
 }
 .visualInner h2 span{
     font-size: 7rem;
     color:#fff;
-    letter-spacing: 0.625rem;
+    letter-spacing: 0.3rem;
 }
 /*gsap blind effect*/
 
@@ -217,20 +216,20 @@ header.on .gnbOpen svg>*{
 }
 .whatPics li{
     display: flex;
-    align-items:flex-start;
+    align-items:center;
     width: 40.244%; /*660/1680*100*/
     height: 660px;
     float:left;
-    background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(../img/what-kingsejong.jpg) center/cover;
+    background: linear-gradient(225deg,rgba(255,255,255,1),rgba(255,255,255,0.3)), url(../img/what-kingsejong.jpg) center/cover;
     border-radius: 20px;
 }
 .whatPics li:nth-of-type(2){
     margin-top: 660px;
-    background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(../img/what-chonggye.jpg) center/cover;
+    background: linear-gradient(135deg,rgba(255,255,255,1), rgba(255,255,255,0.3)), url(../img/what-chonggye.jpg) center/cover;
 }
 .whatPics li:last-of-type{
     margin-top: 660px;
-    background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(../img/what-hannok.jpg) center/cover;
+    background: linear-gradient(225deg,rgba(255,255,255,1), rgba(255,255,255,0.3)), url(../img/what-hannok.jpg) center/cover;
 }
 .whatPics li:nth-child(2n){
     float:right;
@@ -239,13 +238,9 @@ header.on .gnbOpen svg>*{
     display: block;
     width: 100%;
     font-size: 4rem;
-    text-align: right;
+    text-align: center;
     font-family: 'GmarketSansBold';
-    transform: skewY(10deg) translate(30px,-10px);
-}
-.whatPics li:nth-of-type(2) strong{
-    text-align: left;
-    transform: skewY(-10deg) translate(-30px,-10px);
+    transform: skewY(10deg);
 }
 .whatVisual{
     position:absolute;
@@ -335,7 +330,6 @@ footer{
 .footerTop .info{
     display: flex;
     position:absolute;
-    right:0;
 }
 .footerTop li{
     margin-right: 40px;
@@ -353,7 +347,8 @@ footer{
 .footerBottom p{
     color:#fff;
     font-size: 2rem;
-    font-weight: 300;  
+    font-weight: 300;
+    line-height: 1.3; 
 }
 .footerBottom p:last-child{
     margin-top: 20px;
@@ -367,5 +362,175 @@ footer{
         right:-100%; /*for animate*/
         width: 100%; /*660/1920*/
         z-index: 150;
+    }
+    #visual{
+        height: 450px;
+        background-color: #394685;
+        margin-top: 122px;
+        overflow: hidden;
+    }
+    .visualInner .wave{
+        position:absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+    }
+    .visualInner .wave svg>*{
+        transform:translateX(-50%);
+    }
+    .visualInner h2{
+        text-align: center;
+        line-height: 1.3;
+        padding-top: 100px;
+    }
+    .visualInner h2 span{
+        font-size: 3.5rem;
+        color:#fff;
+    }
+    .visualInner .cta{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.5rem;
+        color:#fff;
+        border-radius: 20px;
+        transition: 150ms ease-out;
+    }
+
+    .whatPics{
+        margin-top: 45px;
+        height: 100%;
+    }
+    #what h2{
+        font-size: 3rem;
+    }
+    #what .whatPics li{
+        display: flex;
+        align-items:center;
+        width: 100%;
+        height: 200px;
+        float:none;
+        background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(../img/what-kingsejong.jpg) center/cover;
+        border-radius: 20px;
+    }
+    .whatPics li:not(:first-of-type){
+        margin-top: 30px;
+    }
+    #what .whatPics li:nth-of-type(2){
+        background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(../img/what-chonggye.jpg) center/cover;
+    }
+    #what .whatPics li:nth-of-type(3){
+        background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(../img/what-hannok.jpg) center/cover;
+    }
+    .whatPics li strong{
+        display: block;
+        width: 100%;
+        font-size: 2.3rem;
+        text-align: center;
+        font-family: 'GmarketSansBold';
+        transform: skewY(10deg) translate(0,0);
+    }
+    .whatPics li:nth-of-type(2) strong{
+        text-align: center;
+        transform: skewY(-10deg) translate(0, 0);
+    }
+    .whatInner p{
+        margin-top: 45px;
+        text-align:center;
+        line-height: 1.3;
+    }
+    .whatInner p span{
+        font-size: 1.3rem;
+        display: inline;
+    }
+    .whatVisual{
+        display: none;
+    }
+
+    #howPick{
+        margin-top: 85px;
+    }
+    #howPick h2{
+        font-size: 3rem;
+    }
+    .howPickInner{
+        margin: 0 auto;
+    }
+    .howPickInner ul{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        margin-top: 45px;
+    }
+    .howPickInner li{
+        width: 46%;
+        height: 40vw;
+        background-color:#E8EBF1;
+        border: 1px solid #D5D8DF;
+        border-radius: 50%;
+        text-align:center;
+    }
+    .howPickInner li:nth-of-type(3),
+    .howPickInner li:nth-of-type(4){
+        margin-top: 8%;
+    }
+    .howPickInner li img{
+        width: 30%;
+        height: 30%;
+        margin-top: 30px;
+    }
+    .howPickInner li p{
+        margin-top: 15px;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    footer{
+        margin-top: 80px;
+    }
+    .footerInner{
+        height:auto;
+    }
+    .footerTop{
+        margin-top: 75px;
+        display: block;
+        position:static;
+    }
+    .footerInner h3{
+        text-indent: -9999px;
+        width: 0;
+        height: 0;
+    }
+    .footer h3 img{
+        width: 100%;
+        height: 100%;
+    }
+    .footerTop .info{
+        display: block;
+        position:static;
+    }
+    .footerTop li{
+        margin:0;
+    }
+    .footerTop li a{
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 2rem;
+    }
+    .footerTop li:last-child{
+        margin:0;
+    }
+    .footerBottom{
+        margin-top: 128px;
+        padding-bottom: 75px;
+    }
+    .footerBottom p{
+        color:#fff;
+        font-size: 1.6rem;
+        font-weight: 300;  
+    }
+    .footerBottom p:last-child{
+        margin-top: 20px;
     }
 }
