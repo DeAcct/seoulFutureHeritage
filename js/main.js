@@ -74,6 +74,10 @@ if (hasClass(document.body.classList, 'index')){
             scrub:-3
         }
     })
+    gsap.from(".visualInner h2 span",{
+        letterSpacing:"3rem",
+        duration: 1
+    })
 }
 
 
