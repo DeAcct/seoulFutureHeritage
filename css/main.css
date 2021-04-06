@@ -32,22 +32,21 @@ header.on h1 svg>*{
     fill:#444A54;
 }
 .headerInner{
-    position:relative;
     width: 85.417%; 
     height: 122px;
     margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .headerInner h1{
     display: block;
     width: 210px;
     height: 45px;
-    padding-top: 38px;
 }
 
 .gnbOpen{
-    position:absolute;
     right: 0;
-    top:38px; 
     width: 45px;
     height: 45px;
     padding:0;
