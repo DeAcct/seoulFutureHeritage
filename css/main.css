@@ -317,6 +317,8 @@ footer{
     margin-top: 150px;
     display: flex;
     position:relative;
+    align-items: center;
+    justify-content: space-between;
 }
 .footerInner h3{
     display: block;
@@ -329,7 +331,6 @@ footer{
 }
 .footerTop .info{
     display: flex;
-    position:absolute;
 }
 .footerTop li{
     margin-right: 40px;
