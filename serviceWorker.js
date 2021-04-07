@@ -85,6 +85,12 @@ const assets = [
     './img/yongsan-location-wondaegu.jpg',
     './img/yongsan-location-wonsam.jpg',
     './img/yongsan-visual.jpg',
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js',
+    'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff',
+    './manifest.json',
+
 ]
 
 /*
@@ -119,9 +125,11 @@ self.addEventListener('install', (event)=>{
 self.addEventListener('fetch', (event)=>{
     event.respondWith(
         caches.match(event.request).then((r)=>{
-            return r || fetch(event.request).then((cache)=>{
-                cache.put(event.request, response.clone());
-                return response;
+            return r || fetch(event.request).then((response)=>{
+                return caches.open(cacheName).then((cache)=>{
+                    cache.put(event.request, response.clone());
+                    return response
+                })
             })
         })
     )
