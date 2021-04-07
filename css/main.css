@@ -354,8 +354,20 @@ footer{
 .footerBottom p:last-child{
     margin-top: 20px;
 }
-
-
+@media (prefers-color-scheme: dark) {
+    #visual{
+        background-color: #394685;
+    }
+    .wave .waveBg1{
+        fill:#2e3972;
+    }
+    .wave .waveBg2{
+        fill:#191f3d;
+    }
+    .wave .waveBg3{
+        fill:#000;
+    }
+}
 @media all and (max-width:768px){
     .menu{
         position:fixed;
