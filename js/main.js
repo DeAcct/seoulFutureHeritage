@@ -1,3 +1,14 @@
+if ('serviceWorker' in navigator){
+    try{
+        navigator.serviceWorker.register('serviceWorker.js')
+        console.log("서비스워커 등록됨")
+    }
+    catch(error){
+        console.log("서비스워커 등록실패")
+    }
+}
+
+
 const $gnbOpen = document.querySelector('.gnbOpen');
 const $menu = document.querySelector('.menu');
 const hasClass = function(target, keyword){

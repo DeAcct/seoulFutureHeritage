@@ -1,0 +1,18 @@
+{
+    "name": "서울미래유산",
+    "short_name": "서울미래유산",
+    "theme_color": "#394685",
+    "background_color": "#394685",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src":"img/icon-512.png",
+            "type":"image/png",
+            "sizes":"512x512",
+            "purpose": "any maskable"
+        }
+    ]
+}
