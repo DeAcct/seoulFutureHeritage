@@ -537,6 +537,7 @@ footer{
 @media (prefers-color-scheme: dark) {
     header{
         background-color:#1d2447;
+        border-bottom-color: #dfdfdf;
     }
     header.on{
         background-color:#0a0d1b;

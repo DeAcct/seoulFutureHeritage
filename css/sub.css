@@ -973,3 +973,40 @@ header .gnbOpen svg>*{
         stroke: rgba(246, 120, 83, 0.2);
     }
 }
+@media (prefers-color-scheme: dark) {
+    header{
+        background-color:#0a0d1b;
+        border-bottom-color:#dfdfdf;
+    }
+    .currentPage{
+        border-bottom-color:#dfdfdf;
+        border-top-color: #dfdfdf;
+    }
+    header h1 svg>*{
+        fill:#dfdfdf;
+    }
+    header .gnbOpen svg>*{
+        stroke: #dfdfdf;
+    }
+    .recommendedInner .tags{
+        background-color:#0a0d1b;
+        box-shadow: 0 0 20px rgba(223, 223, 223, .08);
+    }
+    .cards a{
+        display: block;
+        width: 100%;
+        padding: 35px 0;
+        background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,0.8)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
+        text-align: center;
+    }
+    .cards a:nth-child(2){ 
+        background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,0.8)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
+        margin-top: 15px;
+    }
+    .cards a strong{
+        background-color:#dfdfdf;
+    }
+    .mapRight svg{
+        filter:grayscale(50%);
+    }
+}
