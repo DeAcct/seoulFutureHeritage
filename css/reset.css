@@ -6,27 +6,7 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'NanumBarunGothic';
-    src: url('font/NanumBarunGothic.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'NanumBarunGothic';
-    src: url('font/NanumBarunGothicBold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'NanumBarunGothic';
-    src: url('font/NanumBarunGothicLight.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap');
 
 :focus{
     outline:4px solid #000;
@@ -68,7 +48,7 @@ button{
 }
 html,body{
     font-size: 0.625em;
-	font-family: 'NanumBarunGothic', '맑은 고딕', Arial, Helvetica, sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 500;
     color:#444A54;
 }

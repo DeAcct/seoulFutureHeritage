@@ -1,12 +1,10 @@
-const cacheName = 'seoulFutureHeritagePWA-v2';
+const cacheName = 'seoulFutureHeritagePWA-v3';
 const assets = [
     './',
+    './manifest.json',
     './css/main.css',
     './css/sub.css',
     './css/reset.css',
-    './css/font/NanumBarunGothic.woff',
-    './css/font/NanumBarunGothicBold.woff',
-    './css/font/NanumBarunGothicLight.woff',
     './js/anime.min.js',
     './js/main.js',
     './js/sub.js',
@@ -84,12 +82,11 @@ const assets = [
     './img/yongsan-location-wondaegu.jpg',
     './img/yongsan-location-wonsam.jpg',
     './img/yongsan-visual.jpg',
+    'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff',
+    'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap',
     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js',
-    'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff',
-    './manifest.json'
-
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js'
 ]
 
 /*
