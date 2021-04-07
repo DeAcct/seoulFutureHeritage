@@ -125,7 +125,6 @@ header .gnbOpen svg>*{
     justify-content: space-between;
     align-items: center;
     margin: 82px auto 0;
-    position:relative;
 }
 .mapLeft strong{
     font-size: 3rem;
@@ -357,10 +356,17 @@ header .gnbOpen svg>*{
 }
 .pageNum li a{
     font-size:3rem;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align:center;
+    line-height: 38px;
+    border-radius: 50%;
 }
 .pageNum li a.current{
-    font-weight: 700;
-    color:#F67853;
+    font-weight: 900;
+    background-color:#444A54;
+    color:#fff;
 }
 .nextBtn{
     width: 48px;
@@ -849,4 +855,121 @@ header .gnbOpen svg>*{
     background: url(../img/download.svg) no-repeat;
     background-size: contain;
     margin: 0 auto;
+}
+
+/*h2는 3rem*/
+@media all and (max-width:768px){
+    /*find*/
+
+    .find main{
+        margin-top: 256px;
+    } 
+    .currentPage h2{
+        line-height: 64px;
+        font-size: 2.8rem;
+    }
+
+    #recommended h2{
+        font-size: 3rem;
+    }
+    .recommendedInner .tags{
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        background-color:#fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.16);
+        border-radius: 20px;
+        padding: 20px 10px;
+    }
+    .recommendedInner .tags li{
+        background-color:transparent;
+        border-radius: 27px;
+    }
+    .recommendedInner .tags li a{
+        text-align: center;
+        font-size: 2.3rem;
+        font-weight: 500;
+        color:#F67853;
+    }
+    .recommendedInner .cards{
+        margin-top: 30px;
+        width: 100%;
+        display:block;
+        justify-content: space-between;
+    }
+    .cards a{
+        display: block;
+        width: 100%;
+        padding: 35px 0;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
+        text-align: center;
+    }
+    .cards a:nth-child(2){ 
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
+        margin-top: 15px;
+    }
+    .cards a::after{
+        display: none;
+    }
+    .cards a strong{
+        margin:0;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 1.8rem;
+    }
+    .cards a .cardInfo{
+        padding: 50px 0 0;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cards a h3{
+        font-size: 2.5rem;
+    }
+    .cards a p{
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    
+    #map{
+        margin-top: 85px;
+    }
+    #map h2{
+        font-size: 3rem;
+    }
+    .mapInner{
+        height: auto;
+        display: block;
+        position:relative;
+        margin-top: 45px;
+    }
+    .mapLeft strong{
+        display: none;
+    }
+    .mapLeft h3{
+        display: none;
+    }
+    .mapRight{
+        width: 100%;
+        height: auto;
+        position:relative;
+        overflow: hidden;
+    }
+    .mapRight svg{
+        width: 100%;
+        height: 100%;
+    }
+    .mapInner .mapVisual{
+        position:absolute;
+        width: 100%;
+        top: -43%;
+    }
+    .mapInner .mapVisual svg{
+        width: 100%;
+        height: 100%;
+        fill:none;
+    }
+    .mapVisual svg>*{
+        stroke: rgba(246, 120, 83, 0.2);
+    }
 }

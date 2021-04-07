@@ -340,6 +340,7 @@ footer{
 .footerTop li a{
     color:#fff;
     font-size: 2.5rem;
+    font-weight: 500;
 }
 .footerBottom{
     margin-top: 256px;
@@ -355,7 +356,7 @@ footer{
 }
 
 
-@media all and (max-width:1024px){
+@media all and (max-width:768px){
     .menu{
         position:fixed;
         top:0;
@@ -517,7 +518,6 @@ footer{
         height: 50px;
         line-height: 50px;
         font-size: 2rem;
-        font-weight: 500;
     }
     .footerTop li:last-child{
         margin:0;
