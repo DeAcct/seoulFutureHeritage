@@ -7,8 +7,6 @@ if ('serviceWorker' in navigator){
         console.log("서비스워커 등록실패")
     }
 }
-
-
 const $gnbOpen = document.querySelector('.gnbOpen');
 const $menu = document.querySelector('.menu');
 const hasClass = function(target, keyword){
