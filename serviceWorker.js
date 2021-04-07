@@ -87,6 +87,7 @@ const assets = [
     './img/yongsan-visual.jpg',
 ]
 
+/*
 self.addEventListener('install', (event)=>{
     event.waitUntil((async () =>{
         const cache = await caches.open(cacheName);
@@ -106,4 +107,22 @@ self.addEventListener('fetch', (event)=>{
         return response;
     })())
 })
+*/
 
+self.addEventListener('install', (event)=>{
+    event.waitUntil(
+        caches.open(cacheName).then((cache)=>{
+            return cache.addAll(assets)
+        })
+    )
+})
+self.addEventListener('fetch', (event)=>{
+    event.respondWith(
+        caches.match(event.request).then((r)=>{
+            return r || fetch(event.request).then((cache)=>{
+                cache.put(event.request, response.clone());
+                return response;
+            })
+        })
+    )
+})
