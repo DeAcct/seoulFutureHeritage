@@ -100,7 +100,7 @@ self.addEventListener('fetch', (event)=>{
         if (r){
             return r;
         }
-        const response = await fetch(e.request);
+        const response = await fetch(event.request);
         const cache = await caches.open(cacheName);
         cache.put(event.request, response.clone());
         return response;
