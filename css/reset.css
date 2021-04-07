@@ -6,7 +6,6 @@
     font-weight: normal;
     font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap');
 
 :focus{
     outline:4px solid #000;
@@ -49,8 +48,9 @@ button{
 html,body{
     font-size: 0.625em;
 	font-family: 'Noto Sans KR', sans-serif;
-	font-weight: 500;
+	font-weight: 300;
     color:#444A54;
+    letter-spacing: -0.025em;
 }
 
 .lnBrk{
