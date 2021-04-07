@@ -59,6 +59,12 @@ html,body{
     color:#444A54;
     letter-spacing: -0.025em;
 }
+@media (prefers-color-scheme: dark) {
+    body{
+        color:#dfdfdf;
+        background-color:#0a0d1b;
+    }
+}
 
 .lnBrk{
     display: block;

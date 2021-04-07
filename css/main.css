@@ -354,27 +354,7 @@ footer{
 .footerBottom p:last-child{
     margin-top: 20px;
 }
-@media (prefers-color-scheme: dark) {
-    header.on{
-        background-color:#000;
-        border-bottom-color: #fff;
-    }
-    #visual{
-        background-color: #394685;
-    }
-    .wave .waveBg1{
-        fill:#2e3972;
-    }
-    .wave .waveBg2{
-        fill:#191f3d;
-    }
-    .wave .waveBg3{
-        fill:#000;
-    }
-    body{
-        background-color:#000;
-    }
-}
+
 @media all and (max-width:768px){
     .menu{
         position:fixed;
@@ -552,5 +532,67 @@ footer{
     }
     .footerBottom p:last-child{
         margin-top: 20px;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    header{
+        background-color:#1d2447;
+    }
+    header.on{
+        background-color:#0a0d1b;
+        border-bottom-color: #dfdfdf;
+    }
+    header h1 svg>*{
+        fill:#dfdfdf;
+    }
+    header.on h1 svg>*{
+        fill:#dfdfdf;
+    }
+    .gnbOpen.open svg>*{
+        stroke: #dfdfdf;
+    }
+    header.on .gnbOpen svg>*{
+        stroke: #dfdfdf;
+    }
+    .menu{
+        background-color: #0a0d1b;
+        
+    }
+    .menu.open{
+        box-shadow: 0 0 30px rgba(255,255,255,0.3);
+    }
+    .gnb li a{
+        color:#dfdfdf;
+    }
+    .visualInner h2 span{
+        color:#dfdfdf;
+    }
+    #visual{
+        background-color: #1d2447;
+    }
+    .wave .waveBg1{
+        fill:#1c2553;
+    }
+    .wave .waveBg2{
+        fill:#131830;
+    }
+    .wave .waveBg3{
+        fill:#0a0d1b;
+    }
+    #what .whatPics li{
+        background: linear-gradient(rgba(10, 13, 27,0.8),rgba(10, 13, 27,0.8)), url(../img/what-kingsejong.jpg) center/cover;
+    }
+    #what .whatPics li:nth-of-type(2){
+        background: linear-gradient(rgba(10, 13, 27,0.8),rgba(10, 13, 27,0.8)), url(../img/what-chonggye.jpg) center/cover;
+    }
+    #what .whatPics li:nth-of-type(3){
+        background: linear-gradient(rgba(10, 13, 27,0.8),rgba(10, 13, 27,0.8)), url(../img/what-hannok.jpg) center/cover;
+    }
+    .howPickInner li{
+        background-color:#131830;
+        border-color: #1c2553;
+    }
+    footer{
+        background-color:#1d2447;
     }
 }
