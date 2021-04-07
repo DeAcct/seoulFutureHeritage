@@ -1,4 +1,4 @@
-const cacheName = 'seoulFutureHeritagePWA-v1';
+const cacheName = 'seoulFutureHeritagePWA-v2';
 const assets = [
     './',
     './css/main.css',
@@ -30,7 +30,6 @@ const assets = [
     './img/find-recommended-2.jpg',
     './img/hamburger.svg',
     './img/icon-32.png',
-    './img/icon-192.png',
     './img/icon-512.png',
     './img/logo.svg',
     './img/nextBtn.svg',
@@ -89,7 +88,7 @@ const assets = [
     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js',
     'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff',
-    './manifest.json',
+    './manifest.json'
 
 ]
 
