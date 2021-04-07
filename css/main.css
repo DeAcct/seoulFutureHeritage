@@ -355,6 +355,10 @@ footer{
     margin-top: 20px;
 }
 @media (prefers-color-scheme: dark) {
+    header.on{
+        background-color:#000;
+        border-bottom-color: #fff;
+    }
     #visual{
         background-color: #394685;
     }
@@ -366,6 +370,9 @@ footer{
     }
     .wave .waveBg3{
         fill:#000;
+    }
+    body{
+        background-color:#000;
     }
 }
 @media all and (max-width:768px){
