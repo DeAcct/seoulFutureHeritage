@@ -1,3 +1,4 @@
+const cacheName = 'seoulFutureHeritagePWA-v1';
 const assets = [
     './',
     './css/main.css',
@@ -86,35 +87,23 @@ const assets = [
     './img/yongsan-visual.jpg',
 ]
 
-self.addEventListener('install', async event=>{
-    const cache = await caches.open('static-cache');
-    cache.addAll(assets)
-})
-self.addEventListener('fetch', event=>{
-    const req = event.request;
-    const url = new URL(req.url)
-
-    if (url.origin === location.url){
-        event.respondWith(cacheFirst(req))
-    }
-    else{
-        event.respondWith(networkFirst(req))
-    }
+self.addEventListener('install', (event)=>{
+    event.waitUntil((async () =>{
+        const cache = await caches.open(cacheName);
+        await cache.addAll(assets)
+    }))
 })
 
-async function cacheFirst(req){
-    const cachedResponse = caches.match(req)
-    return cachedResponse || fetch(req)
-}
+self.addEventListener('fetch', (event)=>{
+    event.respondWith((async () =>{
+        const r = await caches.match(event.request);
+        if (r){
+            return r;
+        }
+        const response = await fetch(e.request);
+        const cache = await caches.open(cacheName);
+        cache.put(event.request, response.clone());
+        return response;
+    })())
+})
 
-async function networkFirst(req){
-    const cache = await caches.open('dynamic-cache')
-    try{
-        const res = await fetch(req)
-        cache.put(req, res.clone())
-        return res
-    }
-    catch (error){
-        return await cache.match(req)
-    }
-}
