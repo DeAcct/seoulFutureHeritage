@@ -1,4 +1,4 @@
-const cacheName = 'seoulFutureHeritagePWA-v3';
+const cacheName = 'seoulFutureHeritagePWA-v4';
 const assets = [
     './',
     './manifest.json',
