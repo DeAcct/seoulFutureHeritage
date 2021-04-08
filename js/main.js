@@ -85,7 +85,9 @@ if (hasClass(document.body.classList, 'index')){
     })
     gsap.from(".visualInner h2 span",{
         letterSpacing:"2rem",
-        ease:"back.out(1.7)"
+        opacity:0,
+        ease:"back.out(1.7)",
+        duration:0.5
     })
 }
 

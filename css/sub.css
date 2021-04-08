@@ -173,7 +173,7 @@ header .gnbOpen svg>*{
 }
 .mapInner .mapVisual{
     position:absolute;
-    width: 100%;
+    width: 85.417%;
     z-index:-1;
 }
 .mapInner .mapVisual svg{
@@ -932,7 +932,7 @@ header .gnbOpen svg>*{
     }
     
     #map{
-        margin-top: 85px;
+        margin-top: 130px;
     }
     #map h2{
         font-size: 3rem;
@@ -941,7 +941,7 @@ header .gnbOpen svg>*{
         height: auto;
         display: block;
         position:relative;
-        margin-top: 45px;
+        margin-top: 90px;
     }
     .mapLeft strong{
         display: none;
@@ -962,15 +962,101 @@ header .gnbOpen svg>*{
     .mapInner .mapVisual{
         position:absolute;
         width: 100%;
-        top: -43%;
+        top: -50%;
     }
     .mapInner .mapVisual svg{
         width: 100%;
         height: 100%;
-        fill:none;
     }
     .mapVisual svg>*{
         stroke: rgba(246, 120, 83, 0.2);
+    }
+    
+    /*yongsan*/
+    .mqChunk{
+        animation: none;
+    }
+    .mqChunk:not(:first-child),
+    .mqChunk>*:not(:first-child){
+        display: none;
+    }
+    .mqChunk>*:first-child{
+        transform: skewY(-10deg);
+    }
+    
+    .yongsan main{
+        margin-top: 45px;
+    }
+    .yongsan .locationWrap{
+        display: block;
+        grid-template-columns:none;
+        grid-template-rows: none;
+        /*그리드 여백*/
+        row-gap: 0; /*세로*/
+        column-gap: 0; /*가로*/
+    }
+    .yongsan .locationWrap a{
+        display: block;
+        height: 300px;
+    }
+    .yongsan .locationWrap a:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .yongsan .locationWrap a:nth-child(2n){
+        grid-row: none;
+    }
+    .yongsan .locationWrap a:nth-child(6){
+        grid-column: none;
+        grid-row: none; 
+    }
+    .yongsan .locationWrap a:last-child{
+        grid-column: none;
+        grid-row: none;
+    }
+    .locationWrap .locationInfo{
+        opacity: 1;
+        height: 100%;
+        transition: none;
+        transform:none;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .locationWrap a:hover .locationInfo{
+        transform:none;
+        opacity: 1;
+    }
+    .locationWrap a .coloring{
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        opacity: 1;
+        align-items: flex-end;
+        padding: 25px 30px;
+    }
+    .locationWrap .locationInfo h3{
+        font-size: 2.2rem;
+        color:#fff;
+        margin-bottom: 30px;
+    }
+    .locationWrap .locationInfo ul{
+        margin: 0 auto;
+    }
+    .locationInfo ul li{
+        display: block;
+        width: 28px;
+        height: 28px;
+    }
+    .locationInfo li button{
+        width: 100%;
+        height: 100%;
+        background: url(../img/yongsan-location-bookmark.svg) no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+    .locationInfo li:nth-child(2) button{
+        background-image: url(../img/yongsan-location-like.svg);
+    }
+    .locationInfo li:last-child button{
+        background-image: url(../img/yongsan-location-share.svg);
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -988,25 +1074,23 @@ header .gnbOpen svg>*{
     header .gnbOpen svg>*{
         stroke: #dfdfdf;
     }
-    .recommendedInner .tags{
-        background-color:#0a0d1b;
-        box-shadow: 0 0 20px rgba(223, 223, 223, .08);
-    }
     .cards a{
-        display: block;
-        width: 100%;
-        padding: 35px 0;
         background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,0.8)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
-        text-align: center;
     }
     .cards a:nth-child(2){ 
         background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,0.8)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
-        margin-top: 15px;
     }
     .cards a strong{
         background-color:#dfdfdf;
     }
     .mapRight svg{
-        filter:grayscale(50%);
+        filter:brightness(0.5);
+    }
+
+    @media all and (max-width:768px){
+        .recommendedInner .tags{
+            background-color:#0a0d1b;
+            box-shadow: 0 0 20px rgba(223, 223, 223, .16);
+        }
     }
 }

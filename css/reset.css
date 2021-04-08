@@ -64,6 +64,9 @@ html,body{
         color:#dfdfdf;
         background-color:#0a0d1b;
     }
+    :focus{
+        outline-color: #dfdfdf;
+    }
 }
 
 .lnBrk{

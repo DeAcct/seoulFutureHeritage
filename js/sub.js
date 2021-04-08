@@ -50,7 +50,7 @@ if (hasClass(document.body.classList, 'tourCourse')){
         targets: '.waveVisual svg path',
         strokeDashoffset: [anime.setDashoffset, 0],
         duration: 5000,
-        direction: 'alternate',
+        direction: 'alternate'
     })
 }
 else if (hasClass(document.body.classList, 'find')){
@@ -58,10 +58,11 @@ else if (hasClass(document.body.classList, 'find')){
     const $locaHeading = document.querySelector('.mapLeft h3')
 
     anime({
-        targets:'.mapInner .mapVisual svg',
-        easing: 'easeInOutCubic',
-        strokeDashoffset: [0, anime.setDashoffset],
-        duration: 600,
+        targets:'.mapVisLine',
+        easing: 'easeInOutQuad',
+        strokeDashoffset: [anime.setDashoffset,0],
+        duration: 9000,
+        direction:'alternate',
         loop:true
     })
 
