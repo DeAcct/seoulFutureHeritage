@@ -85,6 +85,9 @@ else if (hasClass(document.body.classList, 'detail')){
     const $imgSlide = document.body.querySelector('.imgSlide')
     const $prevBtn = document.body.querySelector('.prevImg')
     const $nextBtn = document.body.querySelector('.nextImg')
+    const $viewMore = document.body.querySelector('.viewMore')
+    const hiddens = document.body.querySelectorAll('.summeryWrap .hidden')
+
     gsap.registerPlugin(ScrollTrigger)
     gsap.to(".sumPic", {
         backgroundPosition:100,
@@ -93,6 +96,23 @@ else if (hasClass(document.body.classList, 'detail')){
             start: "top center",
             scrub:2
         }
+    })
+
+    $viewMore.addEventListener('click', ()=>{
+        
+        hiddens.forEach(target=>{
+            if (hasClass(target.classList, 'hidden')){
+                target.classList.remove('hidden')
+                $viewMore.innerText = '접기'
+            }
+            else{
+                target.classList.add('hidden')
+                $viewMore.innerText = '더보기'
+            }
+            /*
+            target.classList.remove('hidden')
+            */
+        })
     })
 
     const mapContainer = document.body.querySelector('.infoMLeft')
