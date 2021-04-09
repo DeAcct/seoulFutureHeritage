@@ -56,6 +56,9 @@ if (hasClass(document.body.classList, 'tourCourse')){
 else if (hasClass(document.body.classList, 'find')){
     const $mapA = document.querySelectorAll('.mapRight svg>a')
     const $locaHeading = document.querySelector('.mapLeft h3')
+    const $smaller = document.querySelector('.smaller')
+    const $larger = document.querySelector('.larger')
+    const $mapRight = document.querySelector('.mapRight')
 
     anime({
         targets:'.mapVisLine',
@@ -70,6 +73,12 @@ else if (hasClass(document.body.classList, 'find')){
         target.addEventListener('mouseenter', function(){
             $locaHeading.innerText=this.dataset.loca
         })
+    })
+    $larger.addEventListener('click', ()=>{
+        $mapRight.classList.add('larger')
+    })
+    $smaller.addEventListener('click', ()=>{
+        $mapRight.classList.remove('larger')
     })
 }
 else if (hasClass(document.body.classList, 'detail')){

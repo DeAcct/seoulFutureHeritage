@@ -177,6 +177,9 @@ header .gnbOpen svg>*{
 .mapRight a:hover .cls-3{
     fill: #eeddd7;
 }
+.mapSize{
+    display: none;
+}
 .mapInner .mapVisual{
     position:absolute;
     width: 85.417%;
@@ -965,9 +968,37 @@ header .gnbOpen svg>*{
         width: 100%;
         height: 100%;
     }
+    .mapRight.larger{
+        overflow: scroll;
+    }
+    .mapRight.larger svg{
+        width: 300%;
+        height: 300%;
+    }
     .mapRight .mobileText{
         font-size: 1.3rem;
         opacity: 1;
+    }
+    .mapSize{
+        display: flex;
+        width: 150px;
+        height: 75px;
+        margin: 30px auto 15px;
+    }
+    .mapSize button{
+        width: 50%;
+        height: 75px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 2rem;
+        color:#fff;
+        font-weight: 500;
+    }
+    .mapSize .smaller{
+        background-color:#444A54;
+    }
+    .mapSize .larger{
+        background-color:#F67853;
     }
     .mapInner .mapVisual{
         position:absolute;

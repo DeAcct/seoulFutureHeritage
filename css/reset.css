@@ -51,6 +51,7 @@ button{
     border:none;
     background-color:transparent;
     padding:0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 html,body{
     font-size: 0.625em;
