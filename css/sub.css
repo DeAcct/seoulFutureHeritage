@@ -156,6 +156,11 @@ header .gnbOpen svg>*{
 .mapRight .cls-3 {
     fill: #e8ebf1;
 }
+.mapRight .mobileText{
+    fill: #444A54;
+    font-size: 1.3rem;
+    opacity: 0;
+}
 .mapRight a:hover{
     transition: 500ms ease-out;
 }
@@ -958,6 +963,10 @@ header .gnbOpen svg>*{
     .mapRight svg{
         width: 100%;
         height: 100%;
+    }
+    .mapRight .mobileText{
+        font-size: 1.3rem;
+        opacity: 1;
     }
     .mapInner .mapVisual{
         position:absolute;
