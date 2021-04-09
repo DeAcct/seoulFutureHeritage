@@ -159,6 +159,7 @@ header .gnbOpen svg>*{
 .mapRight .mobileText{
     fill: #444A54;
     font-size: 1.3rem;
+    font-weight: 900;
     opacity: 0;
 }
 .mapRight a:hover{
