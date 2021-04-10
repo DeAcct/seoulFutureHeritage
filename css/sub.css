@@ -53,7 +53,7 @@ header .gnbOpen svg>*{
     display: block;
     padding: 10px 30px;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 500;
     color:#fff;
 }
 .recommendedInner .cards{
@@ -95,7 +95,7 @@ header .gnbOpen svg>*{
     padding: 13px 30px;
     border-radius: 27px;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 900;
     background-color:#fff;
 }
 .cards a .cardInfo{
@@ -421,6 +421,7 @@ header .gnbOpen svg>*{
     display: block;
     padding-top: 34px;
     font-size: 3rem;
+    font-weight: 500;
 }
 .summeryWrap p{
     display: block;
@@ -592,7 +593,7 @@ header .gnbOpen svg>*{
 .courseRight .courseInfo strong{
     color:#F67853;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 900;
 }
 .courseRight .courseInfo .waveVisual{
     width: 100%;
@@ -619,12 +620,14 @@ header .gnbOpen svg>*{
 .tcDetail #visual{
     background:transparent;
     flex-direction: column;
-    height: 90px;
+    height: 1080px;
     position:relative;
+    z-index: -1;
 }
 .tcDetail #visual strong{
     margin-top: 108px;
     font-size:3rem;
+    font-weight: 500;
 }
 .tcDetail #visual h2{
     display: block;
@@ -668,6 +671,7 @@ header .gnbOpen svg>*{
 .tcDetail .mainInner section{
     width: 100%;
     padding: 90px 70px;
+    background-color: #fff;
     box-shadow: 0 10px 20px rgba(0,0,0,.16);
     position:relative;
 }
@@ -784,6 +788,7 @@ header .gnbOpen svg>*{
     line-height: 75px;
     color: #fff;
     font-size: 3rem;
+    font-weight: 500;
 }
 #tcDetailMap{
     width: 34.375vw;
@@ -881,7 +886,7 @@ header .gnbOpen svg>*{
     /*find*/
 
     .find main{
-        margin-top: 256px;
+        margin-top: 227px;
     } 
     .currentPage h2{
         line-height: 64px;
@@ -1027,8 +1032,15 @@ header .gnbOpen svg>*{
         transform: skewY(-10deg);
     }
     
+    .yongsan #visual{
+        height: 450px;
+        background:linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,1)), url(../img/yongsan-visual.jpg) no-repeat center/cover;
+    }
+    #visual .mqChunk span{
+        color:#444A54;
+    }
     .yongsan main{
-        margin-top: 45px;
+        margin-top: -85px;
     }
     .yongsan .locationWrap{
         display: block;
@@ -1249,19 +1261,16 @@ header .gnbOpen svg>*{
         width: 100%;
         height: 200px;
         border-radius: 20px;
-        overflow: hidden;
-        filter:brightness(50%)
+        filter:brightness(70%)
     }
     .courseRight{
         width: 100%;
     }
     .courseRight h2{
         position:absolute;
-        text-align: left;
         font-size: 3rem;
         top: 58px;
         left: 30px;
-        color:#fff;
     }
     .courseInfo{
         margin-top: 30px;
@@ -1269,7 +1278,6 @@ header .gnbOpen svg>*{
     .courseRight .courseInfo strong{
         color:#F67853;
         font-size: 2rem;
-        font-weight: 700;
     }
     .courseRight .courseInfo .waveVisual{
         width: 100%;
@@ -1281,6 +1289,159 @@ header .gnbOpen svg>*{
     .courseRight .courseInfo p{
         font-size: 1.3rem;
     }
+
+    .tcDetail #visual{
+        height: 450px;
+        background:linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,1)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
+    }
+    .tcDetail #visual strong{
+        margin-top: 108px;
+        font-size:2.8rem;
+    }
+    .tcDetail #visual h2{
+        display: block;
+        line-height: 1.15;
+        margin-top: 30px;
+    }
+    #visual h2 span{
+        font-size: 5rem;
+        text-align: center;
+    }
+    #visual .picMask{
+        display: none;
+    }
+
+    .tcDetail main{
+        margin-top: -85px;
+        padding-bottom: 50px;
+    }
+    .tcDetail .mainInner{
+        display: block;
+    }
+    .tcDetail .mainInner .tcMainLeft{
+        width: 100%;
+    }
+    .tcDetail .mainInner section{
+        padding: 60px 40px;
+    }
+    .tcDetail .mainInner section:not(:last-of-type){
+        margin-bottom: 110px;
+    }
+    .locaCard h2{
+        line-height: 1.15;
+        text-align: left;
+    }
+    .locaCard h2 span{
+        font-size: 3rem;
+    }
+    .locaCard .location{
+        display: block;
+        margin-top: 15px;
+        font-size: 2rem;
+    }
+    .locaCard p{
+        margin-top: 30px;
+        line-height: 1.3;
+        font-size: 1.3rem;
+    }
+    .locaCard .gallery{
+        display: flex;
+        width: 100%;
+        height: 80px;
+        margin-top: 45px;
+        justify-content: space-between;
+    }
+    .locaCard .gallery div{
+        max-width: auto;
+        width: 30%;
+        height: 100%;
+    }
+    .locaCard .more{
+        height: 50px;
+        width: 150px;
+        line-height: 50px;
+        font-size: 2rem;
+    }
+
+    #tcDetailMap{
+        width: 100%;
+        height: 230px;
+        position:fixed;
+        bottom: -230px;
+        right:0;
+        transition:150ms ease-out;
+    }
+    #tcDetailMap .map{
+        width: 100%;
+        height: 100%;
+    }
+    #tcDetailMap.topReach{
+        top: auto;
+        bottom: 0;
+        right: 0;
+    }
+    #tcDetailMap.bottomReach{
+        position:fixed;
+        top:auto;
+        bottom: -230px;
+        right: 0;
+    }
+    #tcDetailMap .control{
+        position:absolute;
+        z-index: 10;
+    }
+    #tcDetailMap .prevImg{
+        background-image:url(../img/upBtn.svg);
+    }
+    #tcDetailMap .nextImg{
+        background-image:url(../img/downBtn.svg);
+    }
+    .wallpaper header{
+        height: 182px;
+    }
+    .tourCourse .currentPage{
+        border-top: 2px solid #444A54;
+        background-color: #fff;
+    }
+    .wallpaper main{
+        margin-top: 227px;
+    }
+    .wallpaper .locationWrap{
+        width: 85.417%;
+        margin:0 auto;
+        display: block;
+        grid-template-columns:none;
+        grid-template-rows: none;
+        /*그리드 여백*/
+        row-gap: 0; /*세로*/
+        column-gap: 0; /*가로*/
+    }
+    
+    .wallpaper .locationWrap a{
+        display: block;
+        border-radius: 20px;
+        height: 300px;
+        overflow: hidden;
+        transition: 150ms ease-in-out;
+    }
+    .wallpaper .locationWrap a:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+    .wallpaper .locationInfo{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .wallpaper .locationInfo h3{
+        margin: 0 auto;
+    }
+    .wallpaper .downloadIcon{
+        width: 48px;
+        height: 48px;
+        background: url(../img/download.svg) no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1299,16 +1460,16 @@ header .gnbOpen svg>*{
         stroke: #dfdfdf;
     }
     .cards a{
-        background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,0.8)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
     }
     .cards a:nth-child(2){ 
-        background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,0.8)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
     }
     .cards a strong{
         background-color:#dfdfdf;
     }
     .mapRight svg{
-        filter:brightness(50%);
+        filter:brightness(70%);
     }
     .locationWrap .locationInfo ul{
         background-color:#dfdfdf;
@@ -1330,7 +1491,7 @@ header .gnbOpen svg>*{
         background-color: #131830;
     }
     .infoMap{
-        filter: brightness(50%);
+        filter: brightness(70%);
     }
     .tourCourse .currentPage{
         background-color: #0a0d1b;
@@ -1339,13 +1500,29 @@ header .gnbOpen svg>*{
     .courseRight .courseInfo p{
         color:#dfdfdf;
     }
+    .tcDetail .mainInner section{
+        background-color: #131830;
+    }
+    .courseRight h2{
+        color:#dfdfdf;
+    }
+    #tcDetailMap .map{
+        filter:brightness(70%);
+    }
+    
 
     @media all and (max-width:768px){
         .recommendedInner .tags{
             background-color:#131830;
         }
+        .yongsan #visual{
+            background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,1)), url(../img/yongsan-visual.jpg) no-repeat center/cover;
+        }
         .summeryWrap .sumPic{
             background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,1)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
+        }
+        .tcDetail #visual{
+            background:linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,1)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
         }
     }
 }
