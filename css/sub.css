@@ -392,11 +392,10 @@ header .gnbOpen svg>*{
 }
 
 /*detail*/
-.detail main{
-    margin-top: 122px;
-}
+
 
 #summery{
+    margin-top: 122px;
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -446,7 +445,9 @@ header .gnbOpen svg>*{
 .transList li{
     display: flex;
     align-items: center;
-    margin-top: 60px;
+}
+.transList li:not(:last-of-type){
+    margin-bottom: 60px;
 }
 .transList .icon{
     width: 5.208vw;
@@ -474,8 +475,11 @@ header .gnbOpen svg>*{
 .infoMediaWrap .infoMLeft{
     width: 48.529%;
     height: 530px;
-    background-color:#ddd;
     /*카카오맵 홀더*/
+}
+.infoMediaWrap .infoMap{
+    width: 100%;
+    height: 530px;
 }
 .infoMediaWrap .infoMRight{
     width: 48.529%;
@@ -891,8 +895,7 @@ header .gnbOpen svg>*{
         display: block;
         width: 100%;
         margin-top: 30px;
-        background-color:#fff;
-        box-shadow: 0 0 10px rgba(0,0,0,0.16);
+        background-color:#eee;
         border-radius: 20px;
         padding: 20px 10px;
     }
@@ -947,7 +950,7 @@ header .gnbOpen svg>*{
     }
     
     #map{
-        margin-top: 130px;
+        margin-top: 85px;
     }
     #map h2{
         font-size: 3rem;
@@ -1091,8 +1094,8 @@ header .gnbOpen svg>*{
     }
     .summeryWrap .sumPic{
         width: 100%; 
-        height: calc(100vh - 366px);
-        background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
+        height: 450px;
+        background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,1)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
     }
     .summeryWrap .heading{
         margin-left: 7.292%;
@@ -1100,37 +1103,183 @@ header .gnbOpen svg>*{
     #summery .summeryWrap .heading h2{
         text-align: left;
         font-size: 5rem;
-        color:#fff;
     }
     .summeryWrap .heading strong{
         display: block;
         padding-top: 15px;
         font-size: 2rem;
-        color:rgba(255,255,255,0.9);
     }
     .summeryWrap p{
         display: block;
-        margin: 90px auto;
+        margin: 90px auto 0;
         width: 85.417%;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         font-weight: 300;
         line-height: 1.3;
     }
     .summeryWrap .viewMore{
         display: block;
         padding: 8px 0;
-        width: 150px;
+        min-width: 80px;
         background-color:#F67853;
         border-radius: 80px;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color:#fff;
         margin: 15px auto 0;
     }
     .summeryWrap .hidden{
         text-indent: -9999px;
-        width: 0;
-        height: 0;
+        height:0;
         margin:0;
+    }
+
+    .transportWrap{
+        width: 85.417%;
+        margin-top: 85px;
+    }
+    .transportWrap h2.vsHide{
+        width: 100%;
+        height: auto;
+        text-indent: 0;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    .transList{
+        width: 100%;
+        background-color:#E8EBF1;
+        padding: 15px 20px;
+    }
+    .transList li{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+    .transList li:not(:last-of-type){
+        margin:0;
+        border-bottom: 1px solid #D5D8DF;
+    }
+    .transList .icon{
+        width: 10.416vw;
+        height: 10.416vw;
+        background: url(../img/detail-transport-bus.svg) no-repeat;
+        background-size: contain;
+        background-position: center;
+        border-radius: 0;
+    }
+    .transList p{
+        margin-left: 15px;
+        font-size: 1.3rem;
+    }
+
+    .infoMediaWrap{
+        display: block;
+        width: 85.417%;
+        margin-top: 85px;
+    }
+    .infoMediaWrap .infoMLeft h2.vsHide{
+        display: block;
+        width: auto;
+        height: auto;
+        text-indent: 0;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    .infoMediaWrap .infoMLeft{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .infoMediaWrap .infoMap{
+        width: 100%;
+        height: 300px;
+        position:relative;
+    }
+    
+    .infoMediaWrap .infoMRight{
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 85px;
+        margin-bottom: 50px;
+    }
+    .infoMRight h2.vsHide{
+        width: auto;
+        height: auto;
+        text-indent: 0;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    } 
+    .imageSlideWrap{
+        padding-bottom: 25px;
+    }
+    
+    .infoMRight .imageSlideWrap{
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+    .control{
+        display: flex;
+        width: 100px;
+        height: 50px;
+        left: 50%;
+        bottom: 25px;
+        transform: translate(-50%, 50%);
+    }
+
+    .tourCourse main{
+        margin-top: 272px;
+    }
+    .tourCourse a:not(:last-of-type){
+        margin-bottom: 85px;
+    }
+    .courseInner{
+        width: 85.417%;
+        display: block;
+        position:relative;
+    }
+    .tourCourse a:nth-of-type(2n) .courseInner{
+        flex-direction: row-reverse;
+    }
+
+    .coursePicWrap{
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+        overflow: hidden;
+        filter:brightness(50%)
+    }
+    .courseRight{
+        width: 100%;
+    }
+    .courseRight h2{
+        position:absolute;
+        text-align: left;
+        font-size: 3rem;
+        top: 58px;
+        left: 30px;
+        color:#fff;
+    }
+    .courseInfo{
+        margin-top: 30px;
+    }
+    .courseRight .courseInfo strong{
+        color:#F67853;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .courseRight .courseInfo .waveVisual{
+        width: 100%;
+        height: 25px;
+        transform: none;
+        margin-bottom:10px;
+        margin-top: 5px;
+    }
+    .courseRight .courseInfo p{
+        font-size: 1.3rem;
     }
 }
 
@@ -1159,13 +1308,13 @@ header .gnbOpen svg>*{
         background-color:#dfdfdf;
     }
     .mapRight svg{
-        filter:brightness(0.5);
+        filter:brightness(50%);
     }
     .locationWrap .locationInfo ul{
         background-color:#dfdfdf;
     }
     .pageNum{
-        background-color:#1c2553;
+        background-color:#131830;
     }
     .pageNum *{
         color:#dfdfdf;
@@ -1175,13 +1324,28 @@ header .gnbOpen svg>*{
         color:#1c2553;
     }
     .summeryWrap .sumPic{
-        background: linear-gradient(rgba(10, 13, 27,0.7),rgba(10, 13, 27,0.7)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
+        background:linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,0.3)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
+    }
+    .transList{
+        background-color: #131830;
+    }
+    .infoMap{
+        filter: brightness(50%);
+    }
+    .tourCourse .currentPage{
+        background-color: #0a0d1b;
+        border-color: #dfdfdf;
+    }
+    .courseRight .courseInfo p{
+        color:#dfdfdf;
     }
 
     @media all and (max-width:768px){
         .recommendedInner .tags{
-            background-color:#0a0d1b;
-            box-shadow: 0 0 20px rgba(223, 223, 223, .16);
+            background-color:#131830;
+        }
+        .summeryWrap .sumPic{
+            background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,1)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
         }
     }
 }

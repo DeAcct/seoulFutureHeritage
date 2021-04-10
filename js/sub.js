@@ -32,26 +32,6 @@ if (hasClass(document.body.classList, 'tourCourse')){
             scrub:2
         }
     })
-    let tl = anime.timeline({
-        duration: 10001,
-        loop:true,
-        easing: 'easeInOutCubic'
-    })
-    tl.add({
-        targets: '.waveVisual svg path',
-        strokeDashoffset: [0, anime.setDashoffset],
-        duration: 5000,
-        direction: 'alternate',
-    }).add({
-        targets: '.waveVisual svg',
-        rotateY: 180,
-        duration: 1
-    }).add({
-        targets: '.waveVisual svg path',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        duration: 5000,
-        direction: 'alternate'
-    })
 }
 else if (hasClass(document.body.classList, 'find')){
     const $mapA = document.querySelectorAll('.mapRight svg>a')
@@ -92,14 +72,13 @@ else if (hasClass(document.body.classList, 'detail')){
     gsap.to(".sumPic", {
         backgroundPosition:100,
         scrollTrigger:{
-            trigger: "#visual",
+            trigger: "body",
             start: "top center",
             scrub:2
         }
     })
 
     $viewMore.addEventListener('click', ()=>{
-        
         hiddens.forEach(target=>{
             if (hasClass(target.classList, 'hidden')){
                 target.classList.remove('hidden')
@@ -109,13 +88,10 @@ else if (hasClass(document.body.classList, 'detail')){
                 target.classList.add('hidden')
                 $viewMore.innerText = '더보기'
             }
-            /*
-            target.classList.remove('hidden')
-            */
         })
     })
 
-    const mapContainer = document.body.querySelector('.infoMLeft')
+    const mapContainer = document.body.querySelector('.infoMap')
     const geocoder = new kakao.maps.services.Geocoder()
     geocoder.addressSearch('서울 용산구 남산공원길 105', function(result, status) {
         if (status === kakao.maps.services.Status.OK) {
