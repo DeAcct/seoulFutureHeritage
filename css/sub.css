@@ -1302,6 +1302,7 @@ header .gnbOpen svg>*{
         display: block;
         line-height: 1.15;
         margin-top: 30px;
+        color:#dfdfdf;
     }
     #visual h2 span{
         font-size: 5rem;
