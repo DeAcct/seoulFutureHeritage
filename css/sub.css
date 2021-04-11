@@ -220,7 +220,7 @@ header .gnbOpen svg>*{
 }
 #visual .mqChunk span{
     font-size: 6.5rem;
-    color:rgba(255,255,255,0.8);
+    color:#dfdfdf;
 }
 
 .yongsan main{
@@ -451,8 +451,8 @@ header .gnbOpen svg>*{
     margin-bottom: 60px;
 }
 .transList .icon{
-    width: 5.208vw;
-    height: 5.208vw;
+    width: 100px;
+    height: 100px;
     background: url(../img/detail-transport-bus.svg) no-repeat,#E8EBF1;
     background-size: 60%;
     background-position: center;
@@ -1173,8 +1173,8 @@ header .gnbOpen svg>*{
         border-bottom: 1px solid #D5D8DF;
     }
     .transList .icon{
-        width: 10.416vw;
-        height: 10.416vw;
+        width: 50px;
+        height: 50px;
         background: url(../img/detail-transport-bus.svg) no-repeat;
         background-size: contain;
         background-position: center;
@@ -1271,6 +1271,7 @@ header .gnbOpen svg>*{
         font-size: 3rem;
         top: 58px;
         left: 30px;
+        color:#fff;
     }
     .courseInfo{
         margin-top: 30px;
@@ -1302,7 +1303,6 @@ header .gnbOpen svg>*{
         display: block;
         line-height: 1.15;
         margin-top: 30px;
-        color:#dfdfdf;
     }
     #visual h2 span{
         font-size: 5rem;
@@ -1375,6 +1375,8 @@ header .gnbOpen svg>*{
     #tcDetailMap .map{
         width: 100%;
         height: 100%;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -10px 20px rgba(0,0,0,.16);
     }
     #tcDetailMap.topReach{
         top: auto;
@@ -1469,6 +1471,11 @@ header .gnbOpen svg>*{
     .cards a strong{
         background-color:#dfdfdf;
     }
+    .transList .icon{
+        background: url(../img/detail-transport-bus.svg) no-repeat,#131830;
+        background-size: 60%;
+        background-position: center;
+    }
     .mapRight svg{
         filter:brightness(70%);
     }
@@ -1487,9 +1494,6 @@ header .gnbOpen svg>*{
     }
     .summeryWrap .sumPic{
         background:linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,0.3)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
-    }
-    .transList{
-        background-color: #131830;
     }
     .infoMap{
         filter: brightness(70%);
@@ -1522,8 +1526,18 @@ header .gnbOpen svg>*{
         .summeryWrap .sumPic{
             background: linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,1)), url(../img/find-recommended-1.JPG) no-repeat center/cover;
         }
+        .transList{
+            background-color: #131830;
+        }
         .tcDetail #visual{
             background:linear-gradient(rgba(10, 13, 27,0.3), rgba(10, 13, 27,1)), url(../img/find-recommended-2.jpg) no-repeat center/cover;
+        }
+        #visual .mqChunk span{
+            color:#dfdfdf;
+        }
+        .transList .icon{
+            background-size: contain;
+            background-position: center;
         }
     }
 }
