@@ -89,33 +89,22 @@ const assets = [
     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js'
 ]
 
-/*
-self.addEventListener('install', (event)=>{
-    event.waitUntil((async () =>{
-        const cache = await caches.open(cacheName);
-        await cache.addAll(assets)
-    }))
-})
-
-self.addEventListener('fetch', (event)=>{
-    event.respondWith((async () =>{
-        const r = await caches.match(event.request);
-        if (r){
-            return r;
-        }
-        const response = await fetch(event.request);
-        const cache = await caches.open(cacheName);
-        cache.put(event.request, response.clone());
-        return response;
-    })())
-})
-*/
-
 self.addEventListener('install', (event)=>{
     event.waitUntil(
         caches.open(cacheName).then((cache)=>{
             return cache.addAll(assets)
         })
+    )
+})
+self.addEventListener('activate', (event)=>{
+    event.waitUntil(
+        caches.keys().then(keys => Promise.all(
+            keys.map(key=>{
+                if (!cacheName.includes(key)){
+                    return caches.delete(key)
+                }
+            })
+        ))
     )
 })
 self.addEventListener('fetch', (event)=>{
